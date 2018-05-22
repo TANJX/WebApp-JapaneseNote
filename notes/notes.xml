@@ -1,0 +1,84 @@
+<notes>
+  <chapter id="1" name="第一单元">
+    <class id="1" name="第1课">
+      <lecture id="1">
+        <name>出会い（生词表1・会话・语法与表达1）</name>
+        <date>Jan 13, 2018</date>
+      </lecture>
+      <lecture id="2">
+        <name>出会い（生词表2・语法与表达1）</name>
+        <date>Jan 17, 2018</date>
+      </lecture>
+      <lecture id="3">
+        <name>日本の鉄道（生词表3・课文）</name>
+        <date>Jan 19, 2018</date>
+      </lecture>
+      <lecture id="4">
+        <name>日本の鉄道（语法与表达2・生词表4）</name>
+        <date>Jan 24, 2018</date>
+      </lecture>
+    </class>
+    <class id="2" name="第2课">
+      <lecture id="1">
+        <name>あいさつ（生词表1・会话・语法与表达）</name>
+        <date>Feb 1, 2018</date>
+      </lecture>
+      <lecture id="2">
+        <name>あいさつの時の礼儀（生词表2・生词表3・课文）</name>
+        <date>Feb 3, 2018</date>
+      </lecture>
+      <lecture id="3">
+        <name>あいさつの時の礼儀（语法与表达2・生词表4）</name>
+        <date>Feb 6, 2018</date>
+      </lecture>
+    </class>
+    <class id="3" name="第3课">
+      <lecture id="1">
+        <name>顔合わせ（生词表1・会话・语法与表达1）</name>
+        <date>May 5, 2018</date>
+      </lecture>
+      <lecture id="2">
+        <name>顔合わせ（生词表2・语法与表达1）</name>
+        <date>May 12, 2018</date>
+      </lecture>
+      <lecture id="3">
+        <name>名字（生词表3・课文）</name>
+        <date>May 13, 2018</date>
+      </lecture>
+      <lecture id="4">
+        <name>名字（语法与表达2・生词表4）</name>
+        <date>May 14, 2018</date>
+      </lecture>
+    </class>
+    <class id="4" name="第4课">
+      <lecture id="1">
+        <name>東京本社（生词表1・会话・语法与表达1）</name>
+        <date>May 15, 2018</date>
+      </lecture>
+      <lecture id="2">
+        <name>東京本社（生词表2・语法与表达1）</name>
+        <date>May 16, 2018</date>
+      </lecture>
+      <lecture id="3">
+        <name>近年サラリーマン事情（生词表3・课文）</name>
+        <date>May 17, 2018</date>
+      </lecture>
+      <lecture id="4">
+        <name>近年サラリーマン事情（语法与表达2・生词表4）</name>
+        <date>May 18, 2018</date>
+      </lecture>
+    </class>
+  </chapter>
+  <chapter id="2" name="第二单元">
+    <class id="1" name="第1课">
+      <lecture id="1">
+        <name>商品紹介（生词表1・会话・语法与表达1）</name>
+        <date>May 20, 2018</date>
+      </lecture>
+      <lecture id="2">
+        <name>商品紹介（生词表2・语法与表达1）</name>
+        <date>May 21, 2018</date>
+      </lecture>
+    </class>
+  </chapter>
+</notes>

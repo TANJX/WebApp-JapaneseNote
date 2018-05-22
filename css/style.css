@@ -1,0 +1,313 @@
+body {
+  font-family: Avenir, "Open Sans", "Helvetica Neue", Helvetica, Arial, Verdana, Roboto, 游ゴシック, "Yu Gothic", 游ゴシック体, YuGothic, "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "Meiryo UI", メイリオ, Meiryo, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+  font-weight: 500;
+}
+
+.head-menu {
+  position: fixed;
+  height: 50px;
+  width: 100vw;
+  background-color: yellowgreen;
+  z-index: 10;
+  top: 0;
+  color: white;
+}
+
+.head-menu .wrapper {
+  margin: 8px 25px 0;
+}
+
+.head-menu h1 {
+  float: left;
+  font-size: 1.5em;
+  font-weight: 300;
+}
+
+.head-menu .menu-btn {
+  display: none;
+  float: right;
+  height: 20px;
+  width: 20px;
+  margin-top: 8px;
+  background-color: lightblue;
+  border-radius: 50%;
+  border: 1px white solid;
+  transition-duration: 0.5s;
+}
+
+.side-menu {
+  position: fixed;
+  height: 100vh;
+  width: 230px;
+  background-color: #eee;
+  z-index: 9;
+}
+
+.side-menu .wrapper {
+  margin: 60px 25px 10px;
+}
+
+.side-menu ul {
+  list-style: none;
+  padding: 0;
+}
+
+.side-menu .chapter-item  {
+  margin-top: 10px;
+}
+
+.side-menu .chapter-item > a {
+  color: black;
+  font-size: 1em;
+  text-decoration: underline;
+}
+
+.side-menu .class-item > a {
+  color: black;
+  font-size: 1em;
+  text-decoration: none;
+}
+
+.side-menu .lecture-item {
+  font-size: 0.7em;
+  text-decoration: none;
+  padding-left: 10px;
+  position: relative;
+}
+
+.side-menu .lecture-item::before {
+  content: ' ';
+  position: absolute;
+  background-color: #37AF4B;
+  height: 2px;
+  width: 2px;
+  left: 0px;
+  top: 7px;
+  border-radius: 50%;
+}
+
+.side-menu .lecture-item a {
+  color: #37AF4B;
+}
+
+.content {
+  padding-left: 260px;
+  padding-top: 50px;
+}
+
+strong {
+  font-weight: 800;
+  text-decoration: underline;
+}
+
+.orange-text {
+  color: orange;
+}
+
+.fold:hover h2::before {
+  content: "";
+  width: 0;
+  height: 0;
+  position: absolute;
+  left: -35px;
+  top: 10px;
+  border-top: 5px solid transparent;
+  border-left: 10px solid gray;
+  border-bottom: 5px solid transparent;
+}
+
+.fold {
+  position: relative;
+}
+
+.more {
+  display: inline;
+  background-color: #aaa;
+  border-radius: 5px;
+  padding: 3px 8px;
+  color: white;
+}
+
+.yellow-bg {
+  background-color: #FFFF66;
+}
+
+.green-bg {
+  background-color: lightgreen;
+}
+
+.example::before {
+  background-color: #BAD9AD;
+  border-radius: 50%;
+  width: 15px;
+  height: 15px;
+  position: absolute;
+  display: inline;
+  content: ' ';
+  left: -20px;
+  top: 2.5px;
+}
+
+.example {
+  color: gray;
+}
+
+.important::before {
+  background-image: url('../star.svg');
+  width: 18px;
+  height: 18px;
+  position: absolute;
+  display: inline;
+  content: ' ';
+  left: -20px;
+  top: 2.5px;
+}
+
+.example-cont {
+  color: gray;
+}
+
+a.anchor {
+  display: block;
+  position: relative;
+  top: -100px;
+  visibility: hidden;
+}
+
+.side-menu .lecture-item .scroll-selected {
+  font-weight: 500;
+  color: #1d9200;
+  text-decoration: underline;
+  transition-duration: .3s;
+}
+
+.side-menu .lecture-item .scroll-selected::before {
+   content: "";
+   width: 0;
+   height: 0;
+   position: absolute;
+   left: -8px;
+   top: 5px;
+   border-top: 3px solid transparent;
+   border-left: 6px solid gray;
+   border-bottom: 3px solid transparent;
+ }
+
+.content p {
+  position: relative;
+}
+
+.content h1 {
+  margin-top: 80px;
+}
+
+.content .container div:first-of-type h1 {
+  margin-top: 20px;
+}
+
+.content h2 {
+  margin-top: 50px;
+  color: #1e4e79;
+  font-weight: 600;
+  border-bottom: none;
+}
+
+.content h3 {
+  color: #1e4e79;
+  font-size: 1.3em;
+}
+
+.text-field {
+  background-color: #f4ffd7;
+  padding: 25px;
+}
+
+.text-field p:last-child {
+  margin-bottom: 0;
+}
+
+@media (max-width: 850px) {
+  .menu-on {
+    transform: translateX(0px);
+    transition-duration: 0.5s;
+  }
+
+  .menu-off {
+    transform: translateX(100vw);
+    transition-duration: 0.5s;
+  }
+
+  .head-menu .menu-btn {
+    display: block;
+  }
+
+  .head-menu .btn-on {
+    border: 2px #bbb solid;
+    background-color: #0F74BA;
+  }
+
+  .side-menu {
+    width: 100vw;
+  }
+
+  .content {
+    padding-left: 0;
+  }
+
+  .content h1 {
+    font-size: 1.3em;
+  }
+
+  .content h2 {
+    font-size: 1.24rem;
+  }
+
+  .content p {
+    font-size: .9rem;
+  }
+
+  .content table {
+    font-size: .9rem;
+  }
+
+  .content table td {
+    padding: 6px 9px;
+  }
+
+  .important::before {
+    width: 15px;
+    height: 15px;
+    left: -15px;
+    top: 3px;
+  }
+
+  .example::before {
+    width: 8px;
+    height: 8px;
+    left: -10px;
+    top: 6px;
+  }
+
+  .side-menu .chapter-item > a {
+    font-size: 1.2em;
+    text-decoration: underline;
+  }
+
+  .side-menu .class-item > a {
+    font-size: 1.2em;
+    text-decoration: none;
+  }
+
+  .side-menu .lecture-item {
+    font-size: 1em;
+    text-decoration: none;
+  }
+
+  .side-menu .lecture-item::before {
+    height: 4px;
+    width: 4px;
+    left: 0;
+    top: 10px;
+  }
+
+}
