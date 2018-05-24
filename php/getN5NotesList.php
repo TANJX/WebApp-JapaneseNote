@@ -9,7 +9,7 @@ $targetedChapterId = $_REQUEST['chapter'];
 if ($_REQUEST['chapter'] == '') {
   return;
 }
-$xml = simplexml_load_file("notes/notes.xml") or die("Error: Cannot create object");
+$xml = simplexml_load_file("../notes/n5/notes.xml") or die("Error: Cannot create object");
 $att = 'id';
 echo '<ul class="chapter">';
 $courses = array();
@@ -31,31 +31,17 @@ foreach ($xml->children() as $chapter) {
     echo '</a>';
     echo '<ul class="class">';
   }
-  foreach ($chapter as $class) {
-    $classId = (string)$class->attributes()->$att;
-    echo '<li class="class-item"><a href="#lecture';
-    echo $i;
+  foreach ($chapter as $lecture) {
+    $lectureId = (string)$lecture->attributes()->$att;
+    $filename = '../notes/n5/';
+    $filename .= $lectureId;
+    $filename .= '.md';
+    $courses [] = $filename;
+    echo '<li class="lecture-item"><a href="#lecture';
+    echo $i++;
     echo '">';
-    echo $class->attributes()->name;
+    echo $lecture->name;
     echo '</a>';
-    echo '<ul class="lecture">';
-    foreach ($class as $lecture) {
-      $lectureId = (string)$lecture->attributes()->$att;
-      $filename = 'notes/';
-      $filename .= $chapterId;
-      $filename .= '-';
-      $filename .= $classId;
-      $filename .= '-';
-      $filename .= $lectureId;
-      $filename .= '.md';
-      $courses [] = $filename;
-      echo '<li class="lecture-item"><a href="#lecture';
-      echo $i++;
-      echo '">';
-      echo $lecture->name;
-      echo '</a>';
-    }
-    echo '</ul>';
   }
   echo '</ul>';
 }

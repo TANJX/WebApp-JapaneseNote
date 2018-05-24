@@ -156,7 +156,7 @@ strong {
 }
 
 .important::before {
-  background-image: url('../star.svg');
+  background-image: url('../img/star.svg');
   width: 18px;
   height: 18px;
   position: absolute;

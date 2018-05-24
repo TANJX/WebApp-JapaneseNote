@@ -9,7 +9,7 @@ $chapterId = $_REQUEST['chapter'];
 if ($_REQUEST['chapter'] == '') {
   return;
 }
-$xml = simplexml_load_file("notes/notes.xml") or die("Error: Cannot create object");
+$xml = simplexml_load_file("../notes/n3/notes.xml") or die("Error: Cannot create object");
 $att = 'id';
 $courses = array();
 $i = 1;
@@ -20,7 +20,7 @@ foreach ($xml->children() as $chapter) {
     $classId = (string)$class->attributes()->$att;
     foreach ($class as $lecture) {
       $lectureId = (string)$lecture->attributes()->$att;
-      $filename = 'notes/';
+      $filename = '../notes/n3/';
       $filename .= $chapterId;
       $filename .= '-';
       $filename .= $classId;
@@ -37,7 +37,8 @@ function readChapter($filename)
 {
   $fp = fopen($filename, "r");
   $str = fread($fp, filesize($filename));
-  echo NoteExtension::instance()->text($str);
+  $text = NoteExtension::instance()->text($str);
+  echo str_replace("@path", "notes/n3/img", $text);
   fclose($fp);
 }
 
