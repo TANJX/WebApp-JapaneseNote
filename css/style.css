@@ -1,5 +1,8 @@
 body {
-  font-family: Avenir, "Open Sans", "Helvetica Neue", Helvetica, Arial, Verdana, Roboto, 游ゴシック, "Yu Gothic", 游ゴシック体, YuGothic, "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "Meiryo UI", メイリオ, Meiryo, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+  /*font-family: Avenir, "Open Sans", "Helvetica Neue",*/
+  /*Helvetica, Arial, Verdana, Roboto, 游ゴシック, "Yu Gothic", 游ゴシック体,*/
+  /*YuGothic, "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "Meiryo UI",*/
+  /*メイリオ, Meiryo, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;*/
   font-weight: 500;
 }
 
@@ -52,7 +55,7 @@ body {
   padding: 0;
 }
 
-.side-menu .chapter-item  {
+.side-menu .chapter-item {
   margin-top: 10px;
 }
 
@@ -182,16 +185,20 @@ a.anchor {
 }
 
 .side-menu .lecture-item .scroll-selected::before {
-   content: "";
-   width: 0;
-   height: 0;
-   position: absolute;
-   left: -8px;
-   top: 5px;
-   border-top: 3px solid transparent;
-   border-left: 6px solid gray;
-   border-bottom: 3px solid transparent;
- }
+  content: "";
+  width: 0;
+  height: 0;
+  position: absolute;
+  left: -8px;
+  top: 5px;
+  border-top: 3px solid transparent;
+  border-left: 6px solid gray;
+  border-bottom: 3px solid transparent;
+}
+
+.content {
+  margin-bottom: 25px;
+}
 
 .content p {
   position: relative;

@@ -22,8 +22,9 @@
       gtag('config', 'UA-116224796-1');
 
   </script>
+  <script src="https://use.typekit.net/uzk1een.js"></script>
+  <script>try{Typekit.load({ async: true });}catch(e){}</script>
   <script src="lib/jquery-3.2.1.min.js"></script>
-  <!-- <script src="lib/jquery-ui.min.js"></script> -->
 
   <link rel="stylesheet" href="lib/bootstrap-material-design.min.css">
   <link rel="stylesheet" href="css/github.css">
@@ -31,7 +32,7 @@
 
 </head>
 
-<body>
+<body class="tk-source-han-sans-simplified-c">
 <script>
     $(function () {
       <?php
@@ -136,14 +137,14 @@
     function fold(i) {
         if ($("#t" + i).is('.open')) {
             // to close
-            this.next(".section").css('display', 'none');
-            this.removeClasthiss("open");
-            this.after('<p class="more">. . .</p>')
+            $("#t" + i).next(".section").css('display', 'none');
+            $("#t" + i).removeClass("open");
+            $("#t" + i).after('<p class="more">. . .</p>')
         } else {
             // to open
-            this.next('.more').remove();
-            this.next(".section").css('display', 'block');
-            this.addClass("open");
+            $("#t" + i).next('.more').remove();
+            $("#t" + i).next(".section").css('display', 'block');
+            $("#t" + i).addClass("open");
         }
     }
 
