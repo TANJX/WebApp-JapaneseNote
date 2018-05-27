@@ -88,5 +88,19 @@
         <date>May 23, 2018</date>
       </lecture>
     </class>
+    <class id="2" name="第6课">
+      <lecture id="1">
+        <name>先輩 - 1</name>
+        <date>May 25, 2018</date>
+      </lecture>
+      <lecture id="2">
+        <name>先輩 - 2</name>
+        <date>May 25, 2018</date>
+      </lecture>
+      <lecture id="3">
+        <name> 「はしの文化」さまざま - 1</name>
+        <date>May 26, 2018</date>
+      </lecture>
+    </class>
   </chapter>
 </notes>

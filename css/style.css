@@ -1,11 +1,6 @@
 body {
-  /*font-family: Avenir, "Open Sans", "Helvetica Neue",*/
-  /*Helvetica, Arial, Verdana, Roboto, 游ゴシック, "Yu Gothic", 游ゴシック体,*/
-  /*YuGothic, "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "Meiryo UI",*/
-  /*メイリオ, Meiryo, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;*/
-  font-weight: 500;
+  font-family: "source-han-sans-japanese", "source-han-sans-simplified-c",sans-serif;
 }
-
 .head-menu {
   position: fixed;
   height: 50px;
@@ -17,13 +12,12 @@ body {
 }
 
 .head-menu .wrapper {
-  margin: 8px 25px 0;
+  margin: 6px 25px 0;
 }
 
 .head-menu h1 {
   float: left;
   font-size: 1.5em;
-  font-weight: 300;
 }
 
 .head-menu .menu-btn {
@@ -99,7 +93,7 @@ body {
 }
 
 strong {
-  font-weight: 800;
+  font-weight: bolder;
   text-decoration: underline;
 }
 
@@ -178,7 +172,7 @@ a.anchor {
 }
 
 .side-menu .lecture-item .scroll-selected {
-  font-weight: 500;
+  font-weight: bolder;
   color: #1d9200;
   text-decoration: underline;
   transition-duration: .3s;
@@ -215,7 +209,7 @@ a.anchor {
 .content h2 {
   margin-top: 50px;
   color: #1e4e79;
-  font-weight: 600;
+  font-weight: bolder;
   border-bottom: none;
 }
 

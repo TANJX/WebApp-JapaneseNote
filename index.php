@@ -35,7 +35,7 @@
 
 </head>
 
-<body class="tk-source-han-sans-simplified-c">
+<body>
 <script>
 
   <?php
