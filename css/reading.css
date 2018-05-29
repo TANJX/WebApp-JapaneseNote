@@ -1,0 +1,30 @@
+.head-menu {
+  background-color: #e0455f;
+}
+
+.side-menu .lecture-item::before {
+  content: ' ';
+  position: absolute;
+  background-color: #ff2680;
+  height: 2px;
+  width: 2px;
+  left: 0px;
+  top: 7px;
+  border-radius: 50%;
+}
+
+.side-menu .lecture-item a {
+  color: #df3084;
+}
+
+.side-menu .lecture-item .scroll-selected {
+  font-weight: bolder;
+  color: #c7004e;
+  text-decoration: underline;
+  transition-duration: .3s;
+}
+
+.text-field {
+  background-color: #ffddd1;
+  padding: 25px;
+}

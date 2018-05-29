@@ -106,5 +106,11 @@
         <date>May 27, 2018</date>
       </lecture>
     </class>
+    <class id="3" name="第7课">
+      <lecture id="1">
+        <name>打ち合わせ - 1</name>
+        <date>May 28 2018</date>
+      </lecture>
+    </class>
   </chapter>
 </notes>

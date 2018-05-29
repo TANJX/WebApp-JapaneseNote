@@ -1,0 +1,48 @@
+
+.yellow-bg {
+  background-color: #FFFF66;
+}
+
+.green-bg {
+  background-color: lightgreen;
+}
+
+.example::before {
+  background-color: #BAD9AD;
+  border-radius: 50%;
+  width: 15px;
+  height: 15px;
+  position: absolute;
+  display: inline;
+  content: ' ';
+  left: -20px;
+  top: 2.5px;
+}
+
+.example {
+  color: gray;
+}
+
+.example-cont {
+  color: gray;
+}
+
+.important::before {
+  background-image: url('../img/star.svg');
+  width: 18px;
+  height: 18px;
+  position: absolute;
+  display: inline;
+  content: ' ';
+  left: -20px;
+  top: 2.5px;
+}
+
+.text-field {
+  background-color: #f4ffd7;
+  padding: 25px;
+}
+
+.text-field p:last-child {
+  margin-bottom: 0;
+}

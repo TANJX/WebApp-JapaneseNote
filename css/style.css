@@ -1,6 +1,7 @@
 body {
-  font-family: "source-han-sans-japanese", "source-han-sans-simplified-c",sans-serif;
+  font-family: "source-han-sans-japanese", "source-han-sans-simplified-c", sans-serif;
 }
+
 .head-menu {
   position: fixed;
   height: 50px;
@@ -125,45 +126,6 @@ strong {
   color: white;
 }
 
-.yellow-bg {
-  background-color: #FFFF66;
-}
-
-.green-bg {
-  background-color: lightgreen;
-}
-
-.example::before {
-  background-color: #BAD9AD;
-  border-radius: 50%;
-  width: 15px;
-  height: 15px;
-  position: absolute;
-  display: inline;
-  content: ' ';
-  left: -20px;
-  top: 2.5px;
-}
-
-.example {
-  color: gray;
-}
-
-.important::before {
-  background-image: url('../img/star.svg');
-  width: 18px;
-  height: 18px;
-  position: absolute;
-  display: inline;
-  content: ' ';
-  left: -20px;
-  top: 2.5px;
-}
-
-.example-cont {
-  color: gray;
-}
-
 a.anchor {
   display: block;
   position: relative;
@@ -216,15 +178,6 @@ a.anchor {
 .content h3 {
   color: #1e4e79;
   font-size: 1.3em;
-}
-
-.text-field {
-  background-color: #f4ffd7;
-  padding: 25px;
-}
-
-.text-field p:last-child {
-  margin-bottom: 0;
 }
 
 @media (max-width: 850px) {

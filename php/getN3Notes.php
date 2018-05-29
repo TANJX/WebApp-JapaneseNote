@@ -12,7 +12,6 @@ if ($_REQUEST['chapter'] == '') {
 $xml = simplexml_load_file("../notes/n3/notes.xml") or die("Error: Cannot create object");
 $att = 'id';
 $courses = array();
-$i = 1;
 foreach ($xml->children() as $chapter) {
   $chapterId1 = (string)($chapter->attributes()->$att);
   if($chapterId1 != $chapterId) continue;

@@ -31,8 +31,23 @@
 
   <link rel="stylesheet" href="lib/bootstrap-material-design.min.css">
   <link rel="stylesheet" href="css/github.css">
+  <link rel="stylesheet" href="css/notes.css">
   <link rel="stylesheet" href="css/style.css">
+  <?php
+  $noteset = $_REQUEST['notes'];
 
+  if ($noteset == '') {
+    $noteset = 'n3';
+  }
+
+  if ($noteset == 'n5') {
+    echo '<link rel="stylesheet" href="css/n5.css">';
+  } else if ($noteset == 'n3') {
+
+  } else if ($noteset == 'reading') {
+    echo '<link rel="stylesheet" href="css/reading.css">';
+  }
+  ?>
 </head>
 
 <body>
@@ -40,14 +55,14 @@
 
   <?php
   echo "$(function () {";
-  $level = $_REQUEST['level'];
+  $noteset = $_REQUEST['notes'];
   $chapterId = $_REQUEST['chapter'];
 
-  if ($_REQUEST['chapter'] == '') {
+  if ($chapterId == '') {
     $chapterId = 1;
   }
-  if ($_REQUEST['level'] == '') {
-    $level = 1;
+  if ($noteset == '') {
+    $noteset = 'n3';
   }
 
   echo 'loadMenu(';
@@ -57,11 +72,8 @@
   echo ');';
   echo '});';
 
-  if ($level == 0) {
-    echo 'const LEVEL = 0;';
-  } else {
-    echo 'const LEVEL = 1;';
-  }
+  echo 'const NOTESET = \'' . $noteset . '\';';
+
   ?>
 
   function switchUnit(unit) {
@@ -92,10 +104,12 @@
               }
           });
       });
-      if (LEVEL === 0)
+      if (NOTESET === 'n5')
           xmlhttp.open("GET", "php/getN5NotesList.php?chapter=" + unit, true);
-      else
+      else if ((NOTESET === 'n3'))
           xmlhttp.open("GET", "php/getN3NotesList.php?chapter=" + unit, true);
+      else if ((NOTESET === 'reading'))
+          xmlhttp.open("GET", "php/getReadingNotesList.php", true);
       xmlhttp.send();
   }
 
@@ -136,10 +150,12 @@
               }
           });
       });
-      if (LEVEL === 0)
+      if (NOTESET === 'n5')
           xmlhttp.open("GET", "php/getN5Notes.php?chapter=" + unit, true);
-      else
+      else if ((NOTESET === 'n3'))
           xmlhttp.open("GET", "php/getN3Notes.php?chapter=" + unit, true);
+      else if ((NOTESET === 'reading'))
+          xmlhttp.open("GET", "php/getReadingNotes.php", true);
       xmlhttp.send();
   }
 
@@ -185,21 +201,21 @@
       }
   }
 </script>
+<div class="head-menu">
+<div class="wrapper clearfix">
 <?php
-$level = $_REQUEST['level'];
+$noteset = $_REQUEST['notes'];
 
-if ($_REQUEST['level'] == '') {
-  $level = 1;
+if ($noteset == '') {
+  $noteset = 'n3';
 }
 
-if ($level == 0) {
-  echo '<div class="head-menu" style="background-color: #039be0">';
-  echo '<div class="wrapper clearfix">';
+if ($noteset == 'n5') {
   echo '<h1>日本語　初級</h1>';
-} else {
-  echo '<div class="head-menu">';
-  echo '<div class="wrapper clearfix">';
+} else if ($noteset == 'n3') {
   echo '<h1>日本語　中級</h1>';
+} else if ($noteset == 'reading') {
+  echo '<h1>日本語　読解</h1>';
 }
 ?>
 
