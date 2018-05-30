@@ -24,7 +24,11 @@
   transition-duration: .3s;
 }
 
+.orange-text {
+  color: #fa4f2f;
+}
+
 .text-field {
-  background-color: #ffddd1;
+  background-color: #ffebe8;
   padding: 25px;
 }

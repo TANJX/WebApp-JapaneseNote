@@ -109,7 +109,11 @@
     <class id="3" name="第7课">
       <lecture id="1">
         <name>打ち合わせ - 1</name>
-        <date>May 28 2018</date>
+        <date>May 28, 2018</date>
+      </lecture>
+      <lecture id="2">
+        <name>打ち合わせ - 2</name>
+        <date>May 29, 2018</date>
       </lecture>
     </class>
   </chapter>

@@ -8,6 +8,21 @@
   <meta http-equiv="x-ua-compatible" content="ie=edge">
   <meta name="viewport"
         content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no">
+  <?php
+  $noteset = $_REQUEST['notes'];
+
+  if ($noteset == '') {
+    $noteset = 'n3';
+  }
+  echo '<base href="http://notes.marstanjx.com/' . $noteset . '/">';
+  ?>
+  <link rel="apple-touch-icon" sizes="180x180" href="../apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="../favicon-32x32.png">
+  <link rel="manifest" href="../site.webmanifest">
+  <link rel="mask-icon" href="../safari-pinned-tab.svg" color="#b7cc54">
+  <meta name="msapplication-TileColor" content="#b7cc54">
+  <meta name="theme-color" content="#b7cc54">
+
   <title>Japanese Notes</title>
   <!-- Global site tag (gtag.js) - Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=UA-116224796-1"></script>
@@ -27,25 +42,19 @@
           Typekit.load({async: true});
       } catch (e) {
       }</script>
-  <script src="lib/jquery-3.2.1.min.js"></script>
-
-  <link rel="stylesheet" href="lib/bootstrap-material-design.min.css">
-  <link rel="stylesheet" href="css/github.css">
-  <link rel="stylesheet" href="css/notes.css">
-  <link rel="stylesheet" href="css/style.css">
+  <script src="../lib/jquery-3.2.1.min.js"></script>
+  <script src='http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.5/jquery-ui.min.js'></script>
+  <link rel="stylesheet" href="../lib/bootstrap-material-design.min.css">
+  <link rel="stylesheet" href="../css/github.css">
+  <link rel="stylesheet" href="../css/notes.css">
+  <link rel="stylesheet" href="../css/style.css">
   <?php
-  $noteset = $_REQUEST['notes'];
-
-  if ($noteset == '') {
-    $noteset = 'n3';
-  }
-
   if ($noteset == 'n5') {
-    echo '<link rel="stylesheet" href="css/n5.css">';
+    echo '<link rel="stylesheet" href="../css/n5.css">';
   } else if ($noteset == 'n3') {
 
   } else if ($noteset == 'reading') {
-    echo '<link rel="stylesheet" href="css/reading.css">';
+    echo '<link rel="stylesheet" href="../css/reading.css">';
   }
   ?>
 </head>
@@ -55,14 +64,10 @@
 
   <?php
   echo "$(function () {";
-  $noteset = $_REQUEST['notes'];
   $chapterId = $_REQUEST['chapter'];
 
   if ($chapterId == '') {
     $chapterId = 1;
-  }
-  if ($noteset == '') {
-    $noteset = 'n3';
   }
 
   echo 'loadMenu(';
@@ -105,11 +110,11 @@
           });
       });
       if (NOTESET === 'n5')
-          xmlhttp.open("GET", "php/getN5NotesList.php?chapter=" + unit, true);
+          xmlhttp.open("GET", "../php/getN5NotesList.php?chapter=" + unit, true);
       else if ((NOTESET === 'n3'))
-          xmlhttp.open("GET", "php/getN3NotesList.php?chapter=" + unit, true);
+          xmlhttp.open("GET", "../php/getN3NotesList.php?chapter=" + unit, true);
       else if ((NOTESET === 'reading'))
-          xmlhttp.open("GET", "php/getReadingNotesList.php", true);
+          xmlhttp.open("GET", "../php/getReadingNotesList.php", true);
       xmlhttp.send();
   }
 
@@ -124,6 +129,33 @@
           $('#main-text').delay("300").fadeIn("500", function () {
           });
           updateField();
+
+          // href click
+          $('.current-chapter a').click(function (event) {
+              event.preventDefault();
+              var targetname = $(this).attr('href').substring(1);
+              console.log(targetname);
+              var target = $('[name="' + targetname + '"]');
+              var distance = Math.abs(target.offset().top - $(document).scrollTop()) / screen.height;
+
+              $('html, body').animate({
+                  scrollTop: target.offset().top
+              }, 1000 + 70 * (distance - 5), "easeInOutExpo", function () {
+                  // Callback after animation
+                  // Must change focus!
+                  var $target = $(target);
+                  $target.focus();
+                  if ($target.is(":focus")) { // Checking if the target was focused
+                      return false;
+                  } else {
+                      $target.attr('tabindex', '-1'); // Adding tabindex for elements not focusable
+                      $target.focus(); // Set focus again
+                  }
+              });
+              return false;
+          });
+
+          // scroll spy
           $(document).scroll(function () {
               var scroll = $(window).scrollTop();
               var elements = $(".content .lecture");
@@ -149,13 +181,14 @@
                   }
               }
           });
+
       });
       if (NOTESET === 'n5')
-          xmlhttp.open("GET", "php/getN5Notes.php?chapter=" + unit, true);
+          xmlhttp.open("GET", "../php/getN5Notes.php?chapter=" + unit, true);
       else if ((NOTESET === 'n3'))
-          xmlhttp.open("GET", "php/getN3Notes.php?chapter=" + unit, true);
+          xmlhttp.open("GET", "../php/getN3Notes.php?chapter=" + unit, true);
       else if ((NOTESET === 'reading'))
-          xmlhttp.open("GET", "php/getReadingNotes.php", true);
+          xmlhttp.open("GET", "../php/getReadingNotes.php", true);
       xmlhttp.send();
   }
 
@@ -202,25 +235,19 @@
   }
 </script>
 <div class="head-menu">
-<div class="wrapper clearfix">
-<?php
-$noteset = $_REQUEST['notes'];
+  <div class="wrapper clearfix">
+    <?php
+    if ($noteset == 'n5') {
+      echo '<h1>日本語　初級</h1>';
+    } else if ($noteset == 'n3') {
+      echo '<h1>日本語　中級</h1>';
+    } else if ($noteset == 'reading') {
+      echo '<h1>日本語　読解</h1>';
+    }
+    ?>
 
-if ($noteset == '') {
-  $noteset = 'n3';
-}
-
-if ($noteset == 'n5') {
-  echo '<h1>日本語　初級</h1>';
-} else if ($noteset == 'n3') {
-  echo '<h1>日本語　中級</h1>';
-} else if ($noteset == 'reading') {
-  echo '<h1>日本語　読解</h1>';
-}
-?>
-
-<div class="menu-btn" onclick='menufold()'></div>
-</div>
+    <div class="menu-btn" onclick='menufold()'></div>
+  </div>
 </div>
 
 <div class="side-menu menu-off">
