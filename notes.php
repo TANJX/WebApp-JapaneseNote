@@ -90,6 +90,7 @@
           $('#main-text').empty();
           loadNote(unit);
       });
+      history.replaceState(null, null, 'http://notes.marstanjx.com/' + NOTESET + '/chapter/' + unit);
       return false;
   }
 
@@ -152,6 +153,10 @@
                       $target.focus(); // Set focus again
                   }
               });
+              return false;
+          });
+          $('.side-menu a').click(function (event) {
+              event.preventDefault();
               return false;
           });
 
