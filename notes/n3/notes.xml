@@ -115,6 +115,10 @@
         <name>打ち合わせ - 2</name>
         <date>May 29, 2018</date>
       </lecture>
+      <lecture id="3">
+        <name>電子メールの作法 - 1</name>
+        <date>May 30, 2018</date>
+      </lecture>
     </class>
   </chapter>
 </notes>

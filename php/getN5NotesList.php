@@ -24,7 +24,7 @@ foreach ($xml->children() as $chapter) {
     echo '</a>';
     continue;
   } else {
-    echo '<li class="chapter-item"><a href="#lecture';
+    echo '<li class="chapter-item current-chapter"><a href="#lecture';
     echo $i;
     echo '">';
     echo $chapter->attributes()->name;

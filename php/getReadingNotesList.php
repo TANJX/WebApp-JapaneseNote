@@ -9,7 +9,7 @@ $xml = simplexml_load_file("../notes/reading/notes.xml") or die("Error: Cannot c
 $att = 'id';
 $i = 1;
 foreach ($xml->children() as $lecture) {
-  echo '<ul class="class">';
+  echo '<ul class="class current-chapter">';
   echo '<li class="lecture-item"><a href="#lecture' . $i++ . '">';
   echo $lecture->name;
   echo '</a>';

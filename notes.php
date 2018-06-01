@@ -43,7 +43,8 @@
       } catch (e) {
       }</script>
   <script src="../lib/jquery-3.2.1.min.js"></script>
-  <script src='http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.5/jquery-ui.min.js'></script>
+<!--  <script src='../lib/jquery-ui.min.js'></script>-->
+  <script src='../lib/jquery-ui.custom.min.js'></script>
   <link rel="stylesheet" href="../lib/bootstrap-material-design.min.css">
   <link rel="stylesheet" href="../css/github.css">
   <link rel="stylesheet" href="../css/notes.css">
@@ -144,13 +145,12 @@
               }, 1000 + 70 * (distance - 5), "easeInOutExpo", function () {
                   // Callback after animation
                   // Must change focus!
-                  var $target = $(target);
-                  $target.focus();
-                  if ($target.is(":focus")) { // Checking if the target was focused
+                  target.focus();
+                  if (target.is(":focus")) { // Checking if the target was focused
                       return false;
                   } else {
-                      $target.attr('tabindex', '-1'); // Adding tabindex for elements not focusable
-                      $target.focus(); // Set focus again
+                      target.attr('tabindex', '-1'); // Adding tabindex for elements not focusable
+                      target.focus(); // Set focus again
                   }
               });
               return false;
