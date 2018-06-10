@@ -142,7 +142,7 @@
 
               $('html, body').animate({
                   scrollTop: target.offset().top
-              }, 1000 + 70 * (distance - 5), "easeInOutExpo", function () {
+              }, 800 + 50 * (distance - 5), "easeOutExpo", function () {
                   // Callback after animation
                   // Must change focus!
                   target.focus();
