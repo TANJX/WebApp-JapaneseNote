@@ -157,6 +157,16 @@
         <name>イタリア旅行 - 1</name>
         <date>June 9, 2018</date>
       </lecture>
+      <lecture id="4">
+        <name>イタリア旅行 - 2</name>
+        <date>June 10, 2018</date>
+      </lecture>
+    </class>
+    <class id="2" name="第10课">
+      <lecture id="1">
+        <name>スケジュール - 1</name>
+        <date>June 11, 2018</date>
+      </lecture>
     </class>
   </chapter>
 </notes>
