@@ -167,6 +167,28 @@
         <name>スケジュール - 1</name>
         <date>June 11, 2018</date>
       </lecture>
+      <lecture id="2">
+        <name>スケジュール - 2</name>
+        <date>June 13, 2018</date>
+      </lecture>
+      <lecture id="3">
+        <name>温泉大国、日本 - 1</name>
+        <date>June 14, 2018</date>
+      </lecture>
+      <lecture id="4">
+        <name>温泉大国、日本 - 2</name>
+        <date>June 15, 2018</date>
+      </lecture>
+    </class>
+    <class id="3" name="第11课">
+      <lecture id="1">
+        <name>スケジュール - 1</name>
+        <date>June 11, 2018</date>
+      </lecture>
+      <lecture id="2">
+        <name>スケジュール - 2</name>
+        <date>June 12. 2018</date>
+      </lecture>
     </class>
   </chapter>
 </notes>

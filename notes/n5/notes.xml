@@ -1,8 +1,24 @@
 <notes>
   <chapter id="11" name="第十一单元">
+    <lecture id="41-1">
+      <name>第41課（1）李さんは部長にほめられました</name>
+      <date>Dec 19, 2017</date>
+	</lecture>
+    <lecture id="41-2">
+      <name>第41課（2）市場調査</name>
+      <date>Dec 16, 2017</date>
+	</lecture>
+    <lecture id="42-1">
+      <name>第42課（1）テレビをつけたまま、出かけてしまいました</name>
+      <date>Dec 18, 2017</date>
+	</lecture>
+    <lecture id="42-2">
+      <name>第42課（2）企画案</name>
+      <date>Dec 20, 2017</date>
+	</lecture>
     <lecture id="43-2">
       <name>第43課（2）プレゼンテーション</name>
-      <date>Dec 21, 2017</date>
+      <date>Dec 20, 2017</date>
 	</lecture>
     <lecture id="43-3">
       <name>第43課（3）プレゼンテーション</name>
