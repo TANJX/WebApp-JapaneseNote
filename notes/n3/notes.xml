@@ -183,11 +183,29 @@
     <class id="3" name="第11课">
       <lecture id="1">
         <name>スケジュール - 1</name>
-        <date>June 11, 2018</date>
+        <date>June 16, 2018</date>
       </lecture>
       <lecture id="2">
         <name>スケジュール - 2</name>
-        <date>June 12. 2018</date>
+        <date>June 17, 2018</date>
+      </lecture>
+      <lecture id="3">
+        <name>漫画とアニメ - 1</name>
+        <date>June 18, 2018</date>
+      </lecture>
+      <lecture id="4">
+        <name>漫画とアニメ - 2</name>
+        <date>June 19, 2018</date>
+      </lecture>
+    </class>
+    <class id="4" name="第12课">
+      <lecture id="1">
+        <name>最終日 - 1</name>
+        <date>June 21, 2018</date>
+      </lecture>
+      <lecture id="2">
+        <name>最終日 - 2</name>
+        <date>June 22, 2018</date>
       </lecture>
     </class>
   </chapter>
