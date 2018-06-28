@@ -207,6 +207,22 @@
         <name>最終日 - 2</name>
         <date>June 22, 2018</date>
       </lecture>
+      <lecture id="3">
+        <name>方言と共通語 - 1</name>
+        <date>June 23, 2018</date>
+      </lecture>
+      <lecture id="4">
+        <name>方言と共通語 - 2</name>
+        <date>June 24, 2018</date>
+      </lecture>
+    </class>
+  </chapter>
+  <chapter id="4" name="第四单元">
+    <class id="1" name="第13课">
+      <lecture id="1">
+        <name>スピーチの依頼 - 1</name>
+        <date>June 26, 2018</date>
+      </lecture>
     </class>
   </chapter>
 </notes>
