@@ -223,6 +223,18 @@
         <name>スピーチの依頼 - 1</name>
         <date>June 26, 2018</date>
       </lecture>
+      <lecture id="2">
+        <name>スピーチの依頼 - 2</name>
+        <date>June 27, 2018</date>
+      </lecture>
+      <lecture id="3">
+        <name>日本の人口が減っている - 1</name>
+        <date>June 28, 2018</date>
+      </lecture>
+      <lecture id="4">
+        <name>日本の人口が減っている - 2</name>
+        <date>June 29, 2018</date>
+      </lecture>
     </class>
   </chapter>
 </notes>
