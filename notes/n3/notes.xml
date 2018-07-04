@@ -236,5 +236,23 @@
         <date>June 29, 2018</date>
       </lecture>
     </class>
+    <class id="2" name="第14课">
+      <lecture id="1">
+        <name>恩師 - 1</name>
+        <date>June 30, 2018</date>
+      </lecture>
+      <lecture id="2">
+        <name>恩師 - 2</name>
+        <date>July 1, 2018</date>
+      </lecture>
+      <lecture id="3">
+        <name>日本の就職活動 - 1</name>
+        <date>July 2, 2018</date>
+      </lecture>
+      <lecture id="4">
+        <name>日本の就職活動 - 2</name>
+        <date>July 3, 2018</date>
+      </lecture>
+    </class>
   </chapter>
 </notes>
