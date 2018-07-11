@@ -98,11 +98,11 @@
         <date>May 25, 2018</date>
       </lecture>
       <lecture id="3">
-        <name> 「はしの文化」さまざま - 1</name>
+        <name>「はしの文化」さまざま - 1</name>
         <date>May 26, 2018</date>
       </lecture>
       <lecture id="4">
-        <name> 「はしの文化」さまざま - 2</name>
+        <name>「はしの文化」さまざま - 2</name>
         <date>May 27, 2018</date>
       </lecture>
     </class>
@@ -182,11 +182,11 @@
     </class>
     <class id="3" name="第11课">
       <lecture id="1">
-        <name>スケジュール - 1</name>
+        <name>若者の意識 - 1</name>
         <date>June 16, 2018</date>
       </lecture>
       <lecture id="2">
-        <name>スケジュール - 2</name>
+        <name>若者の意識 - 2</name>
         <date>June 17, 2018</date>
       </lecture>
       <lecture id="3">
@@ -252,6 +252,38 @@
       <lecture id="4">
         <name>日本の就職活動 - 2</name>
         <date>July 3, 2018</date>
+      </lecture>
+    </class>
+    <class id="3" name="第15课">
+      <lecture id="1">
+        <name>同級生 - 1</name>
+        <date>July 4, 2018</date>
+      </lecture>
+      <lecture id="2">
+        <name>同級生 - 2</name>
+        <date>July 5, 2018</date>
+      </lecture>
+      <lecture id="3">
+        <name>日本のレストラン事情 - 1</name>
+        <date>July 6, 2018</date>
+      </lecture>
+      <lecture id="4">
+        <name>日本のレストラン事情 - 2</name>
+        <date>July 7, 2018</date>
+      </lecture>
+    </class>
+    <class id="4" name="第16课">
+      <lecture id="1">
+        <name>結婚披露宴 - 1</name>
+        <date>July 8, 2018</date>
+      </lecture>
+      <lecture id="2">
+        <name>結婚披露宴 - 2</name>
+        <date>July 9, 2018</date>
+      </lecture>
+      <lecture id="3">
+        <name>変わる結婚式</name>
+        <date>July 10, 2018</date>
       </lecture>
     </class>
   </chapter>
