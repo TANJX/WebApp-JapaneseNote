@@ -287,4 +287,34 @@
       </lecture>
     </class>
   </chapter>
+  <chapter id="5" name="第五单元">
+    <class id="1" name="第17课">
+      <lecture id="1">
+        <name>日本取材の成果</name>
+        <date>June 31, 2018</date>
+      </lecture>
+      <lecture id="2">
+        <name>北京の顔 - 1</name>
+        <date>August 2, 2018</date>
+      </lecture>
+      <lecture id="3">
+        <name>北京の顔 - 2</name>
+        <date>August 3, 2018</date>
+      </lecture>
+    </class>
+    <class id="2" name="第18课">
+      <lecture id="1">
+        <name>売り込み</name>
+        <date>August 5, 2018</date>
+      </lecture>
+      <lecture id="2">
+        <name>手紙 - 1</name>
+        <date>August 6, 2018</date>
+      </lecture>
+      <lecture id="3">
+        <name>手紙 - 2</name>
+        <date>August 7, 2018</date>
+      </lecture>
+    </class>
+  </chapter>
 </notes>
