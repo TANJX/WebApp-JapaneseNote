@@ -43,7 +43,7 @@
       } catch (e) {
       }</script>
   <script src="../lib/jquery-3.2.1.min.js"></script>
-<!--  <script src='../lib/jquery-ui.min.js'></script>-->
+  <!--  <script src='../lib/jquery-ui.min.js'></script>-->
   <script src='../lib/jquery-ui.custom.min.js'></script>
   <link rel="stylesheet" href="../lib/bootstrap-material-design.min.css">
   <link rel="stylesheet" href="../css/github.css">
@@ -70,12 +70,15 @@
   if ($chapterId == '') {
     $chapterId = 1;
   }
+  if ($chapterId == 'all') {
+    $chapterId = 'all';
+    echo 'loadMenu(\'all\');';
+    echo 'loadNote(\'all\');';
+  } else {
+    echo 'loadMenu(' . $chapterId . ');';
+    echo 'loadNote(' . $chapterId . ');';
+  }
 
-  echo 'loadMenu(';
-  echo $chapterId;
-  echo ');loadNote(';
-  echo $chapterId;
-  echo ');';
   echo '});';
 
   echo 'const NOTESET = \'' . $noteset . '\';';
@@ -138,21 +141,27 @@
               var targetname = $(this).attr('href').substring(1);
               console.log(targetname);
               var target = $('[name="' + targetname + '"]');
+
+              // x screen height
               var distance = Math.abs(target.offset().top - $(document).scrollTop()) / screen.height;
 
-              $('html, body').animate({
-                  scrollTop: target.offset().top
-              }, 800 + 50 * (distance - 5), "easeOutExpo", function () {
-                  // Callback after animation
-                  // Must change focus!
-                  target.focus();
-                  if (target.is(":focus")) { // Checking if the target was focused
-                      return false;
-                  } else {
-                      target.attr('tabindex', '-1'); // Adding tabindex for elements not focusable
-                      target.focus(); // Set focus again
-                  }
-              });
+              if (distance < 25) {
+                  $('html, body').animate({
+                      scrollTop: target.offset().top
+                  }, 800 + 50 * (distance - 5), "easeOutExpo", function () {
+                      // Callback after animation
+                      // Must change focus!
+                      target.focus();
+                      if (target.is(":focus")) { // Checking if the target was focused
+                          return false;
+                      } else {
+                          target.attr('tabindex', '-1'); // Adding tabindex for elements not focusable
+                          target.focus(); // Set focus again
+                      }
+                  });
+              } else {
+                  $('html, body').scrollTop(target.offset().top);
+              }
               return false;
           });
           $('.side-menu a').click(function (event) {

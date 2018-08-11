@@ -316,5 +316,15 @@
         <date>August 7, 2018</date>
       </lecture>
     </class>
+    <class id="3" name="第19课">
+      <lecture id="1">
+        <name>クレーム - 1</name>
+        <date>August 10, 2018</date>
+      </lecture>
+      <lecture id="2">
+        <name>クレーム - 2</name>
+        <date>August 11, 2018</date>
+      </lecture>
+    </class>
   </chapter>
 </notes>
