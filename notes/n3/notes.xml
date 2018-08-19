@@ -325,6 +325,16 @@
         <name>クレーム - 2</name>
         <date>August 11, 2018</date>
       </lecture>
+      <lecture id="3">
+        <name> 「水道水」の話</name>
+        <date>August 12, 2018</date>
+      </lecture>
+    </class>
+    <class id="4" name="第20课">
+      <lecture id="1">
+        <name>希望の灯 - 1</name>
+        <date>August 15, 2018</date>
+      </lecture>
     </class>
   </chapter>
 </notes>
