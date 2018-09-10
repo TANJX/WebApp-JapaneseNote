@@ -362,8 +362,12 @@
     </class>
     <class id="2" name="第22课">
       <lecture id="1">
-        <name>電話 - 1</name>
+        <name>電話</name>
         <date>Sep 7, 2018</date>
+      </lecture>
+      <lecture id="2">
+        <name>デジタルカメラ新製品紹介 - 1</name>
+        <date>Sep 8, 2018</date>
       </lecture>
     </class>
   </chapter>
