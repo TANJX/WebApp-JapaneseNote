@@ -27,15 +27,15 @@ PHP, Markdown, Javascript
 ## Quick Links | 链接
 [N5-N4 Notes](http://notes.marstanjx.com/n5/)
 - [Chapter 1 | 第一单元](http://notes.marstanjx.com/n5/chapter/1)
-- [Chapter 2 | 第二单元](http://notes.marstanjx.com/n5/chapter/2)
-- [Chapter 3 | 第三单元](http://notes.marstanjx.com/n5/chapter/3)
-- [Chapter 4 | 第四单元](http://notes.marstanjx.com/n5/chapter/4)
-- [Chapter 5 | 第五单元](http://notes.marstanjx.com/n5/chapter/5)
-- [Chapter 6 | 第六单元](http://notes.marstanjx.com/n5/chapter/6)
-- [Chapter 7 | 第七单元](http://notes.marstanjx.com/n5/chapter/7)
-- [Chapter 8 | 第八单元](http://notes.marstanjx.com/n5/chapter/8)
-- [Chapter 9 | 第九单元](http://notes.marstanjx.com/n5/chapter/9)
-- [Chapter 10 | 第十单元](http://notes.marstanjx.com/n5/chapter/10)
+- Chapter 2 | 第二单元
+- Chapter 3 | 第三单元
+- Chapter 4 | 第四单元
+- Chapter 5 | 第五单元
+- Chapter 6 | 第六单元
+- Chapter 7 | 第七单元
+- Chapter 8 | 第八单元
+- Chapter 9 | 第九单元
+- Chapter 10 | 第十单元
 - [Chapter 11 | 第十一单元](http://notes.marstanjx.com/n5/chapter/11)
 - [Chapter 12 | 第十二单元](http://notes.marstanjx.com/n5/chapter/12)
 
@@ -47,8 +47,8 @@ PHP, Markdown, Javascript
 - [Chapter 4 | 第四单元](http://notes.marstanjx.com/n3/chapter/4)
 - [Chapter 5 | 第五单元](http://notes.marstanjx.com/n3/chapter/5)
 - [Chapter 6 | 第六单元](http://notes.marstanjx.com/n3/chapter/6)
-- [Chapter 7 | 第七单元](http://notes.marstanjx.com/n3/chapter/7)
-- [Chapter 8 | 第八单元](http://notes.marstanjx.com/n3/chapter/8)
+- Chapter 7 | 第七单元
+- Chapter 8 | 第八单元
 
 [Reading Notes | 阅读](http://notes.marstanjx.com/reading/)
 
