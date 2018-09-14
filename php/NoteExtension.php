@@ -12,6 +12,7 @@ class NoteExtension extends Parsedown
     $this->InlineTypes['&'][] = 'Example';
     $this->InlineTypes['$'][] = 'Important';
     $this->InlineTypes['!'][] = 'OrangeText';
+    $this->InlineTypes[':'][] = 'Audio';
 
     $this->BlockTypes['/'][] = 'QuickTable';
     $this->BlockTypes['~'][] = 'TextField';
@@ -20,9 +21,31 @@ class NoteExtension extends Parsedown
     $this->inlineMarkerList .= '%';
     $this->inlineMarkerList .= '&';
     $this->inlineMarkerList .= '$';
+    $this->inlineMarkerList .= ':';
     $this->blockMarkerList .= '&';
     $this->blockMarkerList .= '~';
 
+  }
+
+  protected function inlineAudio($excerpt)
+  {
+    if (preg_match('/^::audio::(.*?)$/', $excerpt['text'], $matches)) {
+      return array(
+
+        // How many characters to advance the Parsedown's
+        // cursor after being done processing this tag.
+          'extent' => strlen($matches[0]),
+          'element' => array(
+              'name' => 'audio',
+              'text' => 'Your browser does not support the audio element.',
+              'attributes' => array(
+                  'class' => 'audio',
+                  'controls' => 'true',
+                  'src' => $matches[1]
+              )
+          ),
+      );
+    }
   }
 
   protected function inlineOrangeText($excerpt)
