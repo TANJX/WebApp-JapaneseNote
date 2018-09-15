@@ -374,5 +374,11 @@
         <date>Sep 9, 2018</date>
       </lecture>
     </class>
+    <class id="3" name="第23课">
+      <lecture id="1">
+        <name>紹興を訪ねる</name>
+        <date>Sep 14, 2018</date>
+      </lecture>
+    </class>
   </chapter>
 </notes>
