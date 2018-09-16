@@ -429,7 +429,7 @@ table tr:nth-child(2n) {
 img {
   max-width: 100%;
   box-sizing: content-box;
-  background-color: #fff;
+  /*background-color: #fff;*/
 }
 
 code {

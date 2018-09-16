@@ -27,6 +27,15 @@
   color: gray;
 }
 
+strong {
+  font-weight: bolder;
+  text-decoration: underline;
+}
+
+.orange-text {
+  color: orange;
+}
+
 .important::before {
   background-image: url('../img/star.svg');
   width: 18px;

@@ -164,7 +164,7 @@
               }
               return false;
           });
-          $('.side-menu a').click(function (event) {
+          $('#menu-main a').click(function (event) {
               event.preventDefault();
               return false;
           });
@@ -247,6 +247,25 @@
           menu = true;
       }
   }
+
+  $(function () {
+      $('.menu-links').hover(function (e) {
+          $('.shown-text').animate({
+              bottom: "50px"
+          }, 500, "easeInOutExpo");
+          $('.hidden-text').animate({
+              bottom: "50px"
+          }, 600, "easeInOutExpo");
+      }, function (e) {
+          $('.shown-text').animate({
+              bottom: "0"
+          }, 600, "easeInOutExpo");
+          $('.hidden-text').animate({
+              bottom: "0"
+          }, 500, "easeInOutExpo");
+      });
+  });
+
 </script>
 <div class="head-menu">
   <div class="wrapper clearfix">
@@ -265,7 +284,19 @@
 </div>
 
 <div class="side-menu menu-off">
-  <div class="wrapper" id="menu-main"></div>
+  <div class="menu-main">
+    <div class="wrapper" id="menu-main"></div>
+  </div>
+  <div class="menu-links">
+    <a href="https://github.com/TANJX/WebApp-JapaneseNote" target="_blank">
+      <img src="../img/github.svg" alt="GitHub Logo">
+    </a>
+    <a href="http://marstanjx.com" target="_blank">
+      <img src="../img/mars.svg" alt="GitHub Logo">
+    </a>
+    <p class="shown-text">Japanese Notes 2.1</p>
+    <p class="hidden-text">developed by Mars</p>
+  </div>
 </div>
 
 <div class="content">

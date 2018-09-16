@@ -34,17 +34,64 @@ body {
 }
 
 .side-menu {
-  overflow: auto;
   position: fixed;
   height: 100vh;
   width: 230px;
   background-color: #eee;
   z-index: 9;
-  padding-bottom: 80px;
+  padding-bottom: 40px;
+}
+
+.side-menu .menu-main {
+  overflow: auto;
+  height: 100%;
 }
 
 .side-menu .wrapper {
   margin: 60px 25px 10px;
+  position: relative;
+}
+
+.side-menu .menu-links {
+  position: absolute;
+  padding: 10px 10px 0 0;
+  bottom: 5px;
+  width: 100%;
+  right: 0;
+  margin: 0 auto;
+  left: 0;
+  /* border-top: 1px solid #585858; */
+  display: flex;
+  flex-direction: row-reverse;
+  overflow: hidden;
+  z-index: 99;
+}
+
+.menu-links img {
+  width: 25px;
+  height: 25px;
+  margin-left: 10px;
+  transition-duration: .3s;
+}
+
+.menu-links img:hover {
+  opacity: .8;
+}
+
+.menu-links p {
+  font-size: .8rem;
+  color: #343a3d;
+  margin: 5px 15px;
+  position: absolute;
+  left: 5px;
+}
+
+.menu-links:hover .shown-text {
+  /*animation: slideUp .8s cubic-bezier(.1,.94,.64,1.01);*/
+}
+
+.hidden-text {
+  transform: translateY(50px);
 }
 
 .side-menu ul {
@@ -93,15 +140,6 @@ body {
 .content {
   padding-left: 260px;
   padding-top: 50px;
-}
-
-strong {
-  font-weight: bolder;
-  text-decoration: underline;
-}
-
-.orange-text {
-  color: orange;
 }
 
 .fold:hover h2::before {
