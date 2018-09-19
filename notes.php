@@ -101,7 +101,7 @@
   function loadMenu(unit) {
       var xmlhttp = new XMLHttpRequest();
       xmlhttp.onreadystatechange = function () {
-          if (this.readyState == 4 && this.status == 200) {
+          if (this.readyState === 4 && this.status === 200) {
               document.getElementById("menu-main").innerHTML = this.responseText;
           }
       };
@@ -126,7 +126,7 @@
   function loadNote(unit) {
       var xmlhttp = new XMLHttpRequest();
       xmlhttp.onreadystatechange = function () {
-          if (this.readyState == 4 && this.status == 200) {
+          if (this.readyState === 4 && this.status === 200) {
               document.getElementById("main-text").innerHTML = this.responseText;
           }
       };

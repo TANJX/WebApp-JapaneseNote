@@ -1,51 +1,103 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
-  <meta charset="utf-8">
-  <meta http-equiv="x-ua-compatible" content="ie=edge">
-  <meta name="viewport"
-        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no">
-  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-  <link rel="manifest" href="/site.webmanifest">
-  <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#b7cc54">
-  <meta name="msapplication-TileColor" content="#b7cc54">
-  <meta name="theme-color" content="#b7cc54">
-  <title>Japanese Notes</title>
-</head>
-<style>
-  body {
-    background-color: #333;
-    color: #eee;
-  }
-  div {
-    font-family: sans-serif;
-  }
-  div {
-    margin-top: calc(50vh - 150px);
-    text-align: center;
-  }
-  a {
-    display: block;
-    margin: 20px 0;
-    color: #039be0;
-    transition: .5s;
-  }
-  a:hover {
-    color: #0a6ebd;
-    transition: .5s;
-  }
-</style>
-<body>
+<html lang="ja">
 
-<div>
-  <h1>Working on it...</h1>
-  <h2>待ててね</h2>
-  <a href="n5">N5 Notes</a>
-  <a href="n3">N3 Notes</a>
-  <a href="reading">Reading Notes</a>
-</div>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>日本語ノート</title>
+  <script src="https://use.typekit.net/uzk1een.js"></script>
+  <script>
+    try {
+      Typekit.load({
+        async: true
+      });
+    } catch (e) {}
+  </script>
+</head>
+
+<body>
+  <div class="hero">
+    <header class="site-header">
+      <div class="container clearfix">
+        <div class="logo-container">
+          <p>日本語ノート</p>
+        </div>
+        <div class="menu-container">
+          <ul>
+            <li>Mars Inc.</li>
+          </ul>
+        </div>
+      </div>
+    </header>
+    <div class="container">
+      <div class="text-center hero-text">
+        <h1>日本語ノート</h1>
+        <p><b>Powered by</b></p>
+        <p>Markdown, PHP, JQUERY, CSS, and HTML</p>
+        <p>
+          <a href="https://github.com/TANJX/WebApp-JapaneseNote" target="_blank">
+            <b>View on Github</b>
+          </a>
+        </p>
+      </div>
+      <div class="cards ">
+        <div class="card transition n3">
+          <div class="logo transition">
+            <h2>N3</h2>
+          </div>
+          <p class="subtitle">基于标准日本语中级</p>
+          <div class="units">
+            <ul>
+              <li><a>第一单元</a></li>
+              <li><a>第二单元</a></li>
+              <li><a>第三单元</a></li>
+            </ul>
+          </div>
+          <div class="cta-container transition">
+            <a href="/n3" class="cta">全部笔记</a>
+          </div>
+          <div class="card_circle transition"></div>
+        </div>
+        <div class="card transition n5">
+          <div class="logo transition">
+            <h2>N5</h2>
+          </div>
+          <p class="subtitle">基于标准日本语中级</p>
+          <div class="units">
+            <ul>
+              <li><a>第一单元</a></li>
+              <li><a>第二单元</a></li>
+              <li><a>第三单元</a></li>
+            </ul>
+          </div>
+          <div class="cta-container transition">
+            <a href="/n5" class="cta">全部笔记</a>
+          </div>
+          <div class="card_circle transition"></div>
+        </div>
+        <div class="card transition reading">
+          <div class="logo transition">
+            <h2>読</h2>
+          </div>
+          <p class="subtitle">基于标准日本语中级</p>
+          <div class="units">
+            <ul>
+              <li><a>第一单元</a></li>
+              <li><a>第二单元</a></li>
+              <li><a>第三单元</a></li>
+            </ul>
+          </div>
+          <div class="cta-container transition">
+            <a href="/reading" class="cta">全部笔记</a>
+          </div>
+          <div class="card_circle transition"></div>
+        </div>
+      </div>
+    </div>
+  </div>
 </body>
+
 </html>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="css/normalize.css">
+<link rel="stylesheet" href="css/index.css">

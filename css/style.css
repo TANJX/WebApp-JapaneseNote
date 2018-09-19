@@ -86,10 +86,6 @@ body {
   left: 5px;
 }
 
-.menu-links:hover .shown-text {
-  /*animation: slideUp .8s cubic-bezier(.1,.94,.64,1.01);*/
-}
-
 .hidden-text {
   transform: translateY(50px);
 }

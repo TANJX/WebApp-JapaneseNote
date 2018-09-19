@@ -19,7 +19,7 @@ PHP, Markdown, Javascript
 23 / 98 notes finished
 
 ### N3-N2 Notes
-81 / 110 notes finished
+83 / 110 notes finished
 
 ### Landing Page
 [Working on it...](http://notes.marstanjx.com/landing.html)
