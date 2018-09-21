@@ -388,5 +388,15 @@
         <date>Sep 16, 2018</date>
       </lecture>
     </class>
+    <class id="4" name="第24课">
+      <lecture id="1">
+        <name>香港—CM撮影の下見</name>
+        <date>Sep 18, 2018</date>
+      </lecture>
+      <lecture id="2">
+        <name>CM - 1</name>
+        <date>Sep 20, 2018</date>
+      </lecture>
+    </class>
   </chapter>
 </notes>

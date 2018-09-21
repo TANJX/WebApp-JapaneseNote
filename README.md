@@ -16,18 +16,18 @@ PHP, Markdown, Javascript
 
 ## Progress | 进度
 ### N5-N4 Notes
-23 / 98 notes finished
+28 / 98 notes finished
 
 ### N3-N2 Notes
-83 / 110 notes finished
+85 / 110 notes finished
 
 ### Landing Page
-[Working on it...](http://notes.marstanjx.com/landing.html)
+[Working on it...](http://notes.marstanjx.com/)
 
 ## Quick Links | 链接
 [N5-N4 Notes](http://notes.marstanjx.com/n5/)
 - [Chapter 1 | 第一单元](http://notes.marstanjx.com/n5/chapter/1)
-- Chapter 2 | 第二单元
+- [Chapter 2 | 第二单元](http://notes.marstanjx.com/n5/chapter/2)
 - Chapter 3 | 第三单元
 - Chapter 4 | 第四单元
 - Chapter 5 | 第五单元
@@ -38,7 +38,6 @@ PHP, Markdown, Javascript
 - Chapter 10 | 第十单元
 - [Chapter 11 | 第十一单元](http://notes.marstanjx.com/n5/chapter/11)
 - [Chapter 12 | 第十二单元](http://notes.marstanjx.com/n5/chapter/12)
-
 
 [N3-N2 Notes](http://notes.marstanjx.com/n3/)
 - [Chapter 1 | 第一单元](http://notes.marstanjx.com/n3/chapter/1)
