@@ -1,9 +1,9 @@
 DirectorySlash off
+RedirectMatch ^/n3/$ /n3/chapter/1/
+RedirectMatch ^/n5/$ /n5/chapter/1/
 RewriteEngine on
 RewriteCond %{REQUEST_FILENAME} !-f
-RewriteRule ^(.*[^/])$ /$1/ [L,R] # <- for test, for prod use [L,R=301]
+RewriteRule ^(.*[^/])$ /$1/ [L,R=301]
 RewriteRule ^reading/$ notes.php?notes=reading [NC,L]
-RewriteRule ^n5/$ notes.php?notes=n5 [NC,L]
-RewriteRule ^n3/$ notes.php?notes=n3 [NC,L]
 RewriteRule ^/?n3/chapter/([^/d]+)/?$ notes.php?notes=n3&chapter=$1 [L,QSA]
 RewriteRule ^/?n5/chapter/([^/d]+)/?$ notes.php?notes=n5&chapter=$1 [L,QSA]

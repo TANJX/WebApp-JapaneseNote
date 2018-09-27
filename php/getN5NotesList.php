@@ -5,9 +5,13 @@
  * Date: 5/20/2018
  * Time: 4:40 PM
  */
+$all = false;
 $targetedChapterId = $_REQUEST['chapter'];
 if ($_REQUEST['chapter'] == '') {
   return;
+}
+if ($_REQUEST['chapter'] == 'all') {
+    $all = true;
 }
 $xml = simplexml_load_file("../notes/n5/notes.xml") or die("Error: Cannot create object");
 $att = 'id';
@@ -16,7 +20,7 @@ $courses = array();
 $i = 1;
 foreach ($xml->children() as $chapter) {
   $chapterId = (string)($chapter->attributes()->$att);
-  if ($chapterId != $targetedChapterId) {
+  if (!$all && $chapterId != $targetedChapterId) {
     echo '<li class="chapter-item"><a href="#" onclick="switchUnit(';
     echo $chapterId;
     echo ')">';

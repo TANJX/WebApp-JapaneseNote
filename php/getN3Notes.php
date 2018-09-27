@@ -24,12 +24,7 @@ foreach ($xml->children() as $chapter) {
     foreach ($class as $lecture) {
       $lectureId = (string)$lecture->attributes()->$att;
       $filename = '../notes/n3/';
-      $filename .= $chapterId1;
-      $filename .= '-';
-      $filename .= $classId;
-      $filename .= '-';
-      $filename .= $lectureId;
-      $filename .= '.md';
+      $filename .= $chapterId1 . '-' . $classId . '-' . $lectureId . '.md';
       $courses [] = $filename;
     }
   }
