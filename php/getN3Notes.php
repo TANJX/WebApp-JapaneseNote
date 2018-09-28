@@ -36,8 +36,8 @@ function readChapter($filename)
   $fp = fopen($filename, "r");
   $str = fread($fp, filesize($filename));
   $text = NoteExtension::instance()->text($str);
-  $text = str_replace("@path", "../notes/n3/img", $text);
-  $text = str_replace("@audio", "../notes/n3/audio", $text);
+  $text = str_replace("@path", "/notes/n3/img", $text);
+  $text = str_replace("@audio", "/notes/n3/audio", $text);
   echo $text;
   fclose($fp);
 }

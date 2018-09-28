@@ -2,6 +2,11 @@ body {
   font-family: "source-han-sans-japanese", "source-han-sans-simplified-c", sans-serif;
 }
 
+::selection {
+   background: #bafea9;
+   color: #242424;
+ }
+
 .head-menu {
   position: fixed;
   height: 50px;
