@@ -397,6 +397,26 @@
         <name>CM - 1</name>
         <date>Sep 20, 2018</date>
       </lecture>
+      <lecture id="3">
+        <name>CM - 2</name>
+        <date>Sep 21, 2018</date>
+      </lecture>
+    </class>
+  </chapter>
+  <chapter id="7" name="第七单元">
+    <class id="1" name="第25课">
+      <lecture id="1">
+        <name>創作中華料理コンテストの実現 - 1</name>
+        <date>Sep 25, 2018</date>
+      </lecture>
+      <lecture id="2">
+        <name>創作中華料理コンテストの実現 - 2</name>
+        <date>Sep 26, 2018</date>
+      </lecture>
+      <lecture id="3">
+        <name>本の寿司から世界のSUSHIへ</name>
+        <date>Sep 27, 2018</date>
+      </lecture>
     </class>
   </chapter>
 </notes>
