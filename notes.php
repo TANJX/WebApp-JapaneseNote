@@ -8,18 +8,10 @@
   <meta http-equiv="x-ua-compatible" content="ie=edge">
   <meta name="viewport"
         content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no">
-  <?php
-  $noteset = $_REQUEST['notes'];
-
-  if ($noteset == '') {
-    $noteset = 'n3';
-  }
-  echo '<base href="http://notes.marstanjx.com/' . $noteset . '/">';
-  ?>
-  <link rel="apple-touch-icon" sizes="180x180" href="../apple-touch-icon.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="../favicon-32x32.png">
-  <link rel="manifest" href="../site.webmanifest">
-  <link rel="mask-icon" href="../safari-pinned-tab.svg" color="#b7cc54">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#b7cc54">
   <meta name="msapplication-TileColor" content="#b7cc54">
   <meta name="theme-color" content="#b7cc54">
 
@@ -42,26 +34,31 @@
           Typekit.load({async: true});
       } catch (e) {
       }</script>
-  <script src="../lib/jquery-3.2.1.min.js"></script>
-  <!--  <script src='../lib/jquery-ui.min.js'></script>-->
-  <script src='../lib/jquery-ui.custom.min.js'></script>
-  <link rel="stylesheet" href="../lib/bootstrap-material-design.min.css">
-  <link rel="stylesheet" href="../css/github.css">
-  <link rel="stylesheet" href="../css/notes.css">
-  <link rel="stylesheet" href="../css/style.css">
+  <script src="/lib/jquery-3.2.1.min.js"></script>
+  <script src='/lib/jquery-ui.custom.min.js'></script>
+  <link rel="stylesheet" href="/lib/bootstrap-material-design.min.css">
+  <link rel="stylesheet" href="/css/github.css">
+  <link rel="stylesheet" href="/css/notes.css">
+  <link rel="stylesheet" href="/css/style.css">
   <?php
+  $noteset = $_REQUEST['notes'];
+
+  if ($noteset == '') {
+    $noteset = 'n3';
+  }
   if ($noteset == 'n5') {
-    echo '<link rel="stylesheet" href="../css/n5.css">';
+    echo '<link rel="stylesheet" href="/css/n5.css">';
   } else if ($noteset == 'n3') {
 
   } else if ($noteset == 'reading') {
-    echo '<link rel="stylesheet" href="../css/reading.css">';
+    echo '<link rel="stylesheet" href="/css/reading.css">';
   }
   ?>
 </head>
 
 <body>
 <script>
+  let NOTESET;
 
   <?php
   echo "$(function () {";
@@ -81,7 +78,7 @@
 
   echo '});';
 
-  echo 'const NOTESET = \'' . $noteset . '\';';
+  echo 'NOTESET = \'' . $noteset . '\';';
 
   ?>
 
@@ -99,7 +96,7 @@
   }
 
   function loadMenu(unit) {
-      var xmlhttp = new XMLHttpRequest();
+      let xmlhttp = new XMLHttpRequest();
       xmlhttp.onreadystatechange = function () {
           if (this.readyState === 4 && this.status === 200) {
               document.getElementById("menu-main").innerHTML = this.responseText;
@@ -115,16 +112,16 @@
           });
       });
       if (NOTESET === 'n5')
-          xmlhttp.open("GET", "../php/getN5NotesList.php?chapter=" + unit, true);
+          xmlhttp.open("GET", "/php/getN5NotesList.php?chapter=" + unit, true);
       else if ((NOTESET === 'n3'))
-          xmlhttp.open("GET", "../php/getN3NotesList.php?chapter=" + unit, true);
+          xmlhttp.open("GET", "/php/getN3NotesList.php?chapter=" + unit, true);
       else if ((NOTESET === 'reading'))
-          xmlhttp.open("GET", "../php/getReadingNotesList.php", true);
+          xmlhttp.open("GET", "/php/getReadingNotesList.php", true);
       xmlhttp.send();
   }
 
   function loadNote(unit) {
-      var xmlhttp = new XMLHttpRequest();
+      let xmlhttp = new XMLHttpRequest();
       xmlhttp.onreadystatechange = function () {
           if (this.readyState === 4 && this.status === 200) {
               document.getElementById("main-text").innerHTML = this.responseText;
@@ -138,12 +135,12 @@
           // href click
           $('.current-chapter a').click(function (event) {
               event.preventDefault();
-              var targetname = $(this).attr('href').substring(1);
+              let targetname = $(this).attr('href').substring(1);
               console.log(targetname);
-              var target = $('[name="' + targetname + '"]');
+              let target = $('[name="' + targetname + '"]');
 
               // x screen height
-              var distance = Math.abs(target.offset().top - $(document).scrollTop()) / screen.height;
+              let distance = Math.abs(target.offset().top - $(document).scrollTop()) / screen.height;
 
               if (distance < 25) {
                   $('html, body').animate({
@@ -171,17 +168,17 @@
 
           // scroll spy
           $(document).scroll(function () {
-              var scroll = $(window).scrollTop();
-              var elements = $(".content .lecture");
-              var el;
-              for (var i = elements.length - 1; i >= 0; i--) {
+              let scroll = $(window).scrollTop();
+              let elements = $(".content .lecture");
+              let el;
+              for (let i = elements.length - 1; i >= 0; i--) {
                   el = $(elements[i]);
-                  var offset = el.offset();
-                  var pos = offset.top - $(document).scrollTop();
+                  let offset = el.offset();
+                  let pos = offset.top - $(document).scrollTop();
                   if (pos < 350) {
-                      var course = el.children().first().attr("name");
-                      var courses = $("#menu-main .lecture-item a");
-                      for (var j = 0; j < courses.length; j++) {
+                      let course = el.children().first().attr("name");
+                      let courses = $("#menu-main .lecture-item a");
+                      for (let j = 0; j < courses.length; j++) {
                           el = $(courses[j]);
                           if (el.attr("href") === "#" + course) {
                               if (!el.hasClass("scroll-selected")) {
@@ -198,16 +195,16 @@
 
       });
       if (NOTESET === 'n5')
-          xmlhttp.open("GET", "../php/getN5Notes.php?chapter=" + unit, true);
+          xmlhttp.open("GET", "/php/getN5Notes.php?chapter=" + unit, true);
       else if ((NOTESET === 'n3'))
-          xmlhttp.open("GET", "../php/getN3Notes.php?chapter=" + unit, true);
+          xmlhttp.open("GET", "/php/getN3Notes.php?chapter=" + unit, true);
       else if ((NOTESET === 'reading'))
-          xmlhttp.open("GET", "../php/getReadingNotes.php", true);
+          xmlhttp.open("GET", "/php/getReadingNotes.php", true);
       xmlhttp.send();
   }
 
   function updateField() {
-      var i = 1;
+      let i = 1;
       $(".content h1").each(function () {
           $(this).before('<a class="anchor" name="lecture' + i++ + '"></a>');
       });
@@ -289,10 +286,10 @@
   </div>
   <div class="menu-links">
     <a href="https://github.com/TANJX/WebApp-JapaneseNote" target="_blank">
-      <img src="../img/github.svg" alt="GitHub Logo">
+      <img src="/img/github.svg" alt="GitHub Logo">
     </a>
     <a href="http://marstanjx.com" target="_blank">
-      <img src="../img/mars.svg" alt="GitHub Logo">
+      <img src="/img/mars.svg" alt="GitHub Logo">
     </a>
     <p class="shown-text">Japanese Notes 2.1</p>
     <p class="hidden-text">developed by Mars</p>

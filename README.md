@@ -16,10 +16,10 @@ PHP, Markdown, Javascript
 
 ## Progress | 进度
 ### N5-N4 Notes
-28 / 98 notes finished
+32 / 98 notes finished
 
 ### N3-N2 Notes
-85 / 110 notes finished
+88 / 110 notes finished
 
 ### Landing Page
 [Working on it...](http://notes.marstanjx.com/)
