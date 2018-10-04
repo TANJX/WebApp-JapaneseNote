@@ -27,7 +27,7 @@ foreach ($xml->children() as $chapter) {
     $courses [] = $filename;
   }
 }
-include 'NoteExtension.php';
+require 'NoteExtension.php';
 
 function readChapter($filename)
 {
