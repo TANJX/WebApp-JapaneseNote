@@ -40,7 +40,7 @@ class NoteExtension extends Parsedown
               'text' => 'Your browser does not support the audio element.',
               'attributes' => array(
                   'class' => 'audio',
-                  'controls' => 'true',
+                  'controls' => '',
                   'src' => $matches[1]
               )
           ),

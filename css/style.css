@@ -3,9 +3,9 @@ body {
 }
 
 ::selection {
-   background: #bafea9;
-   color: #242424;
- }
+  background: #bafea9;
+  color: #242424;
+}
 
 .head-menu {
   position: fixed;
@@ -19,6 +19,11 @@ body {
 
 .head-menu .wrapper {
   margin: 6px 25px 0;
+  display: flex;
+}
+
+.head-menu .right {
+  margin-left: auto;
 }
 
 .head-menu h1 {
@@ -28,14 +33,56 @@ body {
 
 .head-menu .menu-btn {
   display: none;
-  float: right;
-  height: 20px;
-  width: 20px;
-  margin-top: 8px;
-  background-color: lightblue;
-  border-radius: 50%;
-  border: 1px white solid;
-  transition-duration: 0.5s;
+  margin-left: 10px;
+}
+
+.burger {
+  position: absolute;
+  z-index: 200;
+  right: 10px;
+  top: 19px;
+  cursor: pointer;
+  transform: rotateY(0);
+  transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.burger__patty {
+  z-index: 2000;
+  width: 24px;
+  height: 2px;
+  margin: 0 0 4px 0;
+  background: white;
+  transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.burger__patty:last-child {
+  margin-bottom: 0;
+}
+
+.burger--close {
+  -webkit-transform: rotate(180deg);
+  transform: rotate(180deg);
+}
+
+.burger--close .burger__patty:nth-child(1) {
+  transform: rotate(45deg) translate(4px, 4px);
+}
+
+.burger--close .burger__patty:nth-child(2) {
+  opacity: 0;
+}
+
+.burger--close .burger__patty:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -4px);
+}
+
+.head-menu .night-btn {
+  display: inline-block;
+}
+
+.head-menu .night-btn img {
+  height: 25px;
+  margin: 7px 10px 0 0;
 }
 
 .side-menu {
@@ -232,17 +279,17 @@ a.anchor {
     transition-duration: 0.5s;
   }
 
-  .head-menu .menu-btn {
-    display: block;
+  .head-menu .wrapper {
+    margin-left: 15px;
   }
 
-  .head-menu .btn-on {
-    border: 2px #bbb solid;
-    background-color: #0F74BA;
+  .head-menu .menu-btn {
+    display: inline-block;
   }
 
   .side-menu {
     width: 100vw;
+    transition: 1s;
   }
 
   .content {

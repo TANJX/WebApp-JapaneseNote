@@ -1,0 +1,63 @@
+body {
+  background-color: black;
+  color: #d5d5d5;
+}
+
+.side-menu {
+  background-color: #383838;
+}
+
+.side-menu .chapter-item > a,
+.side-menu .class-item > a {
+  color: #d5d5d5;
+}
+
+.menu-links p {
+  color: #d5d5d5;
+}
+
+.content h1 {
+  color: #d5d5d5;
+}
+
+.content h2 {
+  color: #3393dc;
+}
+
+.content h3 {
+  color: #2b7ebf;
+}
+
+.content p {
+  color: #d5d5d5;
+}
+
+table tr {
+  background-color: #161616;
+}
+
+table tr:nth-child(2n) {
+  background-color: #434343;
+}
+
+table th, table td {
+  border: 1px solid #626262;
+}
+
+.text-field {
+  background-color: #636363;
+}
+
+.example {
+  color: #c8c8c8;
+}
+
+.yellow-bg {
+  background-color: #b6b64c;
+  color: #f5f5f5;
+}
+
+.green-bg {
+  background-color: #6cb86c;
+  color: #f5f5f5;
+}
