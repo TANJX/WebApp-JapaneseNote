@@ -418,5 +418,25 @@
         <date>Sep 27, 2018</date>
       </lecture>
     </class>
+    <class id="2" name="第26课">
+      <lecture id="1">
+        <name>イベント前夜</name>
+        <date>Sep 29, 2018</date>
+      </lecture>
+      <lecture id="2">
+        <name>地球温暖化 - 1</name>
+        <date>Oct 2, 2018</date>
+      </lecture>
+      <lecture id="3">
+        <name>地球温暖化 - 2</name>
+        <date>Oct 3, 2018</date>
+      </lecture>
+    </class>
+    <class id="3" name="第27课">
+      <lecture id="1">
+        <name>イベント当日 - 1</name>
+        <date>Oct 4, 2018</date>
+      </lecture>
+    </class>
   </chapter>
 </notes>
