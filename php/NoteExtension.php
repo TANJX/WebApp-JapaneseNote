@@ -210,7 +210,7 @@ class NoteExtension extends Parsedown
           'name' => 'td',
           'handler' => array(
               'function' => 'lineElements',
-              'argument' => $part,
+              'argument' => str_replace("\\\\", "<br>", $part),
               'destination' => 'elements',
           )
       );
