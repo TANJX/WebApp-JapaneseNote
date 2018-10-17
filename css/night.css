@@ -32,6 +32,10 @@ body {
   color: #d5d5d5;
 }
 
+.content rt {
+  color: #f1f1f1;
+}
+
 table tr {
   background-color: #161616;
 }

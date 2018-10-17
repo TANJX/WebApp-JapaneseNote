@@ -13,6 +13,7 @@ class NoteExtension extends Parsedown
     $this->InlineTypes['$'][] = 'Important';
     $this->InlineTypes['!'][] = 'OrangeText';
     $this->InlineTypes[':'][] = 'Audio';
+    $this->InlineTypes['_'][] = 'Pronunciation';
 
     $this->BlockTypes['/'][] = 'QuickTable';
     $this->BlockTypes['~'][] = 'TextField';
@@ -22,9 +23,37 @@ class NoteExtension extends Parsedown
     $this->inlineMarkerList .= '&';
     $this->inlineMarkerList .= '$';
     $this->inlineMarkerList .= ':';
+    $this->inlineMarkerList .= '_';
     $this->blockMarkerList .= '&';
     $this->blockMarkerList .= '~';
 
+  }
+
+  protected function inlinePronunciation($excerpt)
+  {
+    if (preg_match('/__(.*?)__/', $excerpt['text'], $matches)) {
+      $parts = explode('_', $matches[1]);
+
+      $elements = array();
+      $elements [] = array(
+          'text' => $parts[0]
+      );
+      $elements [] = array(
+          'name' => 'rt',
+          'text' => $parts[1]
+      );
+      $element = array(
+
+        // How many characters to advance the Parsedown's
+        // cursor after being done processing this tag.
+          'extent' => strlen($matches[0]),
+          'element' => array(
+              'name' => 'ruby',
+              'elements' => $elements
+          ),
+      );
+      return $element;
+    }
   }
 
   protected function inlineAudio($excerpt)
