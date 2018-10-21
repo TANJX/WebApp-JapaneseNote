@@ -319,7 +319,7 @@
     <a href="http://marstanjx.com" target="_blank">
       <img src="/img/mars.svg" alt="Mars Logo">
     </a>
-    <p class="shown-text">Japanese Notes 2.2</p>
+    <p class="shown-text">Japanese Notes 2.3</p>
     <p class="hidden-text">developed by Mars</p>
   </div>
 </div>

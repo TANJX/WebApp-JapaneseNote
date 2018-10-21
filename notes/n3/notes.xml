@@ -461,4 +461,20 @@
       </lecture>
     </class>
   </chapter>
+  <chapter id="8" name="第八单元">
+    <class id="1" name="第29课">
+      <lecture id="1">
+        <name>イベント打上げ</name>
+        <date>Oct 17, 2018</date>
+      </lecture>
+      <lecture id="2">
+        <name>宇宙食 - 1</name>
+        <date>Oct 18, 2018</date>
+      </lecture>
+      <lecture id="3">
+        <name>宇宙食 - 2</name>
+        <date>Oct 20, 2018</date>
+      </lecture>
+    </class>
+  </chapter>
 </notes>
