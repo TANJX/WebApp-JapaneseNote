@@ -31,7 +31,8 @@
   <script>try {
           Typekit.load({async: true});
       } catch (e) {
-      }</script>
+      }
+  </script>
   <script src="/lib/jquery-3.2.1.min.js"></script>
   <script src='/lib/jquery-ui.custom.min.js'></script>
   <link rel="stylesheet" href="/lib/bootstrap-material-design.min.css">
@@ -103,7 +104,9 @@
         xmlhttp.addEventListener("load", function (ev) {
             $('#menu-main').fadeIn("500", function () {
             });
+            // close menu when click a link on the menu
             $("a").on("click", function () {
+                console.log($(this));
                 if (menu) {
                     menuFold();
                 }
@@ -127,39 +130,19 @@
         };
         xmlhttp.addEventListener("load", function (ev) {
             $('#main-text').delay("300").fadeIn("500", function () {
+                const lecture = window.location.href.split('#')[1];
+                scrollToLecture(lecture);
             });
             updateField();
 
-            // href click
+            // lecture link click
             $('.current-chapter a').click(function (event) {
-                event.preventDefault();
                 let targetname = $(this).attr('href').substring(1);
                 console.log(targetname);
-                let target = $('[name="' + targetname + '"]');
-
-                // x screen height
-                let distance = Math.abs(target.offset().top - $(document).scrollTop()) / screen.height;
-
-                if (distance < 25) {
-                    $('html, body').animate({
-                        scrollTop: target.offset().top
-                    }, 800 + 50 * (distance - 5), "easeOutExpo", function () {
-                        // Callback after animation
-                        // Must change focus!
-                        target.focus();
-                        if (target.is(":focus")) { // Checking if the target was focused
-                            return false;
-                        } else {
-                            target.attr('tabindex', '-1'); // Adding tabindex for elements not focusable
-                            target.focus(); // Set focus again
-                        }
-                    });
-                } else {
-                    $('html, body').scrollTop(target.offset().top);
-                }
-                return false;
+                scrollToLecture(targetname);
             });
-            $('#menu-main a').click(function (event) {
+            $('#menu-main .chapter-item:not(.current-chapter) a').click(function (event) {
+                console.log('not');
                 event.preventDefault();
                 return false;
             });
@@ -247,6 +230,31 @@
             $('.side-menu').removeClass('menu-off').addClass('menu-on');
             $('.burger').addClass('burger--close');
             menu = true;
+        }
+    }
+
+    function scrollToLecture(targetname) {
+        let target = $('[name="' + targetname + '"]');
+
+        // x screen height
+        let distance = Math.abs(target.offset().top - $(document).scrollTop()) / screen.height;
+
+        if (distance < 25) {
+            $('html, body').animate({
+                scrollTop: target.offset().top
+            }, 800 + 50 * (distance - 5), "easeOutExpo", function () {
+                // Callback after animation
+                // Must change focus!
+                target.focus();
+                if (target.is(":focus")) { // Checking if the target was focused
+                    return false;
+                } else {
+                    target.attr('tabindex', '-1'); // Adding tabindex for elements not focusable
+                    target.focus(); // Set focus again
+                }
+            });
+        } else {
+            $('html, body').scrollTop(target.offset().top);
         }
     }
 

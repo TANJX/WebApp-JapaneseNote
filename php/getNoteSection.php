@@ -33,7 +33,8 @@ require 'NoteExtension.php';
 $text = NoteExtension::instance()->text($str);
 echo str_replace("@path", "../notes/" . $set . "/img", $text);
 
-function startsWith($haystack, $needle) {
-     $length = strlen($needle);
-     return (substr($haystack, 0, $length) === $needle);
+function startsWith($haystack, $needle)
+{
+  $length = strlen($needle);
+  return (substr($haystack, 0, $length) === $needle);
 }
