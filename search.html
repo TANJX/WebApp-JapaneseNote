@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Search</title>
+  <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css">
   <link rel="stylesheet" href="/css/search.css">
   <script src="https://use.typekit.net/uzk1een.js"></script>
@@ -61,9 +62,11 @@
 
 <script>
     let last_query = '';
+    let last_check = true;
     (function update() {
         let query = $('input[name="search"]').val();
-        if (!/^[0-9]*$/.test(query) && last_query !== query) {
+        let checked = $('#checkbox-1').is(":checked");
+        if (!/^[0-9]*$/.test(query) && (last_check !== checked || last_query !== query)) {
             console.log(query);
             let xmlhttp = new XMLHttpRequest();
             xmlhttp.onreadystatechange = function () {
@@ -73,7 +76,7 @@
                     const result = JSON.parse(this.responseText);
                     // console.log(result);
                     let count = 0;
-                    if (!$('#checkbox-1').is(":checked")) {
+                    if (!checked) {
                         for (count; count < result['results'].length; count++) {
                             if (count > 100) break;
                             let $entry = $("<div class='entry'></div>");
@@ -101,6 +104,7 @@
             xmlhttp.send();
 
             last_query = query;
+            last_check = checked;
         }
         setTimeout(update, 300);
     })();

@@ -39,7 +39,7 @@ input:hover {
 input:focus {
   outline: none;
   border: none;
-  border-bottom: 10px solid #555555;
+  border-bottom: 10px solid #81d981;
   background-color: #ededed;
 }
 
