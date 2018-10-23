@@ -61,7 +61,7 @@ foreach ($dir as $fileinfo) {
       // hit
       if (strpos($line, $query) !== false) {
         // start top
-        if (startsWith($line, '### ')) {
+        if (startsWith($line, '### ') || startsWith($line, '#### ')) {
           $str = $line;
           $str .= PHP_EOL;
           $is_top = true;
