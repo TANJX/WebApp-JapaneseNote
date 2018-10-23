@@ -97,7 +97,7 @@ document.addEventListener("selectionchange", function () {
 
 document.onkeypress = function (e) {
     e = e || window.event;
-    if (e.key === 'f') {
+    if (e.key === 's') {
         search()
     }
 };

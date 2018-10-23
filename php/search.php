@@ -59,7 +59,16 @@ foreach ($dir as $fileinfo) {
       }
 
       // hit
-      if (strpos($line, $query) !== false) {
+      $line_cleared = preg_replace("/_[^_]*__/", "", $line);
+      $line_cleared = preg_replace("/[\.,\/#!$%\^&\*;:{}=\-_`~() \[\]]/", "", $line_cleared);
+      $line_cleared = mb_ereg_replace("、", "", $line_cleared);
+      $line_cleared = mb_ereg_replace("。", "", $line_cleared);
+      $line_cleared = mb_ereg_replace("「", "", $line_cleared);
+      $line_cleared = mb_ereg_replace("」", "", $line_cleared);
+      $line_cleared = mb_ereg_replace("＋", "", $line_cleared);
+      $line_cleared = mb_ereg_replace("：", "", $line_cleared);
+      $line_cleared = mb_ereg_replace("／", "", $line_cleared);
+      if (strpos($line_cleared, $query) !== false) {
         // start top
         if (startsWith($line, '### ') || startsWith($line, '#### ')) {
           $str = $line;
