@@ -79,21 +79,6 @@
       echo 'loadNote(' . $chapterId . ');';
     }
     ?>
-      $('.menu-links').hover(function (e) {
-          $('.shown-text').animate({
-              bottom: "50px"
-          }, 500, "easeInOutExpo");
-          $('.hidden-text').animate({
-              bottom: "50px"
-          }, 600, "easeInOutExpo");
-      }, function (e) {
-          $('.shown-text').animate({
-              bottom: "0"
-          }, 600, "easeInOutExpo");
-          $('.hidden-text').animate({
-              bottom: "0"
-          }, 500, "easeInOutExpo");
-      });
   });
 
 </script>
@@ -142,6 +127,14 @@
 
 <div class="content">
   <div class="container" id="main-text"></div>
+</div>
+
+<div class="search" style="display: none">
+  <img src="/img/search.svg">
+</div>
+
+<div class="search-result" style="display: none">
+  <iframe></iframe>
 </div>
 
 </body>

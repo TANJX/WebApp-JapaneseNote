@@ -25,6 +25,8 @@ function fold(i) {
     }
 }
 
+// menu
+
 let menu = false;
 
 function menuFold() {
@@ -67,6 +69,8 @@ function scrollToLecture(targetname) {
     }
 }
 
+// night mode
+
 let night = false;
 
 function switchNight() {
@@ -79,3 +83,53 @@ function switchNight() {
     }
     night = !night;
 }
+
+// vocab search
+
+document.addEventListener("selectionchange", function () {
+    const text = window.getSelection().toString();
+    if (text.length > 0 && text.length <= 5) {
+        $('.search').show();
+    } else {
+        $('.search').hide();
+    }
+});
+
+document.onkeypress = function (e) {
+    e = e || window.event;
+    if (e.key === 'f') {
+        search()
+    }
+};
+
+function search() {
+    const text = window.getSelection().toString();
+    if (text.length > 0 && text.length <= 5) {
+        const url = "https://dict.hjenglish.com/jp/jc/" + text;
+        window.open(url)
+    }
+}
+
+$(function () {
+    $('.search').click(function () {
+        const text = window.getSelection().toString();
+        const url = "https://dict.hjenglish.com/jp/jc/" + text;
+        window.open(url)
+    });
+
+    $('.menu-links').hover(function (e) {
+        $('.shown-text').animate({
+            bottom: "50px"
+        }, 500, "easeInOutExpo");
+        $('.hidden-text').animate({
+            bottom: "50px"
+        }, 600, "easeInOutExpo");
+    }, function (e) {
+        $('.shown-text').animate({
+            bottom: "0"
+        }, 600, "easeInOutExpo");
+        $('.hidden-text').animate({
+            bottom: "0"
+        }, 500, "easeInOutExpo");
+    });
+});
