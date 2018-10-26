@@ -84,14 +84,14 @@ function switchNight() {
     night = !night;
 }
 
-// vocab search
+// vocab dictionary search
 
 document.addEventListener("selectionchange", function () {
     const text = window.getSelection().toString();
     if (text.length > 0 && text.length <= 5) {
-        $('.search').show();
+        $('.dictionary').show();
     } else {
-        $('.search').hide();
+        $('.dictionary').hide();
     }
 });
 
@@ -111,7 +111,7 @@ function search() {
 }
 
 $(function () {
-    $('.search').click(function () {
+    $('.dictionary').click(function () {
         const text = window.getSelection().toString();
         const url = "https://dict.hjenglish.com/jp/jc/" + text;
         window.open(url)

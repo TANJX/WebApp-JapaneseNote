@@ -76,11 +76,11 @@ body {
   transform: rotate(-45deg) translate(5px, -4px);
 }
 
-.head-menu .night-btn {
+.head-menu .control-btn {
   display: inline-block;
 }
 
-.head-menu .night-btn img {
+.head-menu .control-btn img {
   height: 25px;
   margin: 7px 10px 0 0;
 }
@@ -268,7 +268,7 @@ a.anchor {
   font-size: 1.3em;
 }
 
-.search {
+.dictionary {
   z-index: 10;
   cursor: pointer;
   position: fixed;
@@ -279,7 +279,7 @@ a.anchor {
   padding: 10px;
 }
 
-.search img {
+.dictionary img {
   width: 25px;
   opacity: .7;
 }

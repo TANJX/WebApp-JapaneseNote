@@ -3,15 +3,15 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Search</title>
-  <link rel="stylesheet" href="css/normalize.css">
+  <title>ノート検索 | 日本語ノート</title>
+  <link rel="stylesheet" href="/css/normalize.css">
   <link rel="stylesheet" href="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css">
   <link rel="stylesheet" href="/css/search.css">
   <script src="https://use.typekit.net/uzk1een.js"></script>
   <script>try {
-      Typekit.load({async: true});
-  } catch (e) {
-  }
+          Typekit.load({async: true});
+      } catch (e) {
+      }
   </script>
   <script src="/lib/jquery-3.2.1.min.js"></script>
   <script src='/lib/jquery-ui.custom.min.js'></script>
@@ -33,7 +33,7 @@
                viewBox="0 0 24 24">
             <path class="mdc-checkbox__checkmark-path"
                   fill="none"
-                  d="M1.73,12.91 8.1,19.28 22.79,4.59"/>
+                  d="M1.73,12.91 8.1,19.28 22.79,4.59"></path>
           </svg>
           <div class="mdc-checkbox__mixedmark"></div>
         </div>
@@ -53,8 +53,7 @@
 
 <div id="top-result"></div>
 
-<div id="result">
-</div>
+<div id="result"></div>
 
 <footer>
   <p>Mars Inc.</p>
@@ -63,11 +62,16 @@
 <script>
     let last_query = '';
     let last_check = true;
+    <?php
+    $query = $_REQUEST['query'];
+    if ($query != null) {
+      echo '$(\'input[name="search"]\').val("' . $query . '");';
+    }
+    ?>
     (function update() {
         let query = $('input[name="search"]').val();
         let checked = $('#checkbox-1').is(":checked");
         if (!/^[0-9]*$/.test(query) && (last_check !== checked || last_query !== query)) {
-            console.log(query);
             let xmlhttp = new XMLHttpRequest();
             xmlhttp.onreadystatechange = function () {
                 if (this.readyState === 4 && this.status === 200) {
@@ -99,6 +103,7 @@
                 } else {
                     $('.no-result').hide();
                 }
+                history.replaceState(null, null, 'http://notes.marstanjx.com/search/' + query + '/');
             };
             xmlhttp.open("GET", "/php/search.php?set=n3&query=" + query, true);
             xmlhttp.send();

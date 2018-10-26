@@ -1,3 +1,6 @@
+<?php
+$noteset = $_REQUEST['notes'];
+?>
 <!DOCTYPE html>
 <!--suppress JSUnusedLocalSymbols -->
 <html lang="ja">
@@ -13,7 +16,15 @@
   <meta name="msapplication-TileColor" content="#b7cc54">
   <meta name="theme-color" content="#b7cc54">
 
-  <title>Japanese Notes</title>
+  <title>
+    <?php if ($noteset == 'n5') {
+      echo '初級';
+    } else if ($noteset == 'n3') {
+      echo '中級';
+    } else if ($noteset == 'reading') {
+      echo '読解';
+    }
+    ?> | 日本語ノート</title>
   <!-- Global site tag (gtag.js) - Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=UA-116224796-1"></script>
   <script>
@@ -38,8 +49,6 @@
   <link rel="stylesheet" href="/css/notes.css">
   <link rel="stylesheet" href="/css/style.css">
   <?php
-  $noteset = $_REQUEST['notes'];
-
   if ($noteset == '') {
     $noteset = 'n3';
   }
@@ -96,7 +105,8 @@
       ?>
     </div>
     <div class="right">
-      <div class="night-btn" onclick="switchNight()"><img src="/img/night.svg"></div>
+      <div class="control-btn search-btn" onclick="window.open('/search');"><img src="/img/search.svg"></div>
+      <div class="control-btn night-btn" onclick="switchNight()"><img src="/img/night.svg"></div>
 
       <div class="menu-btn" onclick='menuFold()'>
         <div class="burger">
@@ -129,12 +139,8 @@
   <div class="container" id="main-text"></div>
 </div>
 
-<div class="search" style="display: none">
-  <img src="/img/search.svg">
-</div>
-
-<div class="search-result" style="display: none">
-  <iframe></iframe>
+<div class="dictionary" style="display: none">
+  <img src="/img/dictionary.svg">
 </div>
 
 </body>

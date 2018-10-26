@@ -476,5 +476,19 @@
         <date>Oct 20, 2018</date>
       </lecture>
     </class>
+    <class id="2" name="第30课">
+      <lecture id="1">
+        <name>本社での報告</name>
+        <date>Oct 22, 2018</date>
+      </lecture>
+      <lecture id="2">
+        <name>地震 - 1</name>
+        <date>Oct 23, 2018</date>
+      </lecture>
+      <lecture id="3">
+        <name>地震 - 2</name>
+        <date>Oct 24, 2018</date>
+      </lecture>
+    </class>
   </chapter>
 </notes>

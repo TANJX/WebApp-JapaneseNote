@@ -68,6 +68,8 @@ foreach ($dir as $fileinfo) {
       $line_cleared = mb_ereg_replace("＋", "", $line_cleared);
       $line_cleared = mb_ereg_replace("：", "", $line_cleared);
       $line_cleared = mb_ereg_replace("／", "", $line_cleared);
+      $line_cleared = mb_ereg_replace("（", "", $line_cleared);
+      $line_cleared = mb_ereg_replace("）", "", $line_cleared);
       if (strpos($line_cleared, $query) !== false) {
         // start top
         if (startsWith($line, '### ') || startsWith($line, '#### ')) {
