@@ -1,6 +1,6 @@
 body {
-   font-family: "source-han-sans-japanese", "source-han-sans-simplified-c", sans-serif;
- }
+  font-family: "source-han-sans-japanese", "source-han-sans-simplified-c", sans-serif;
+}
 
 ::selection {
   background: #bafea9;
@@ -379,6 +379,28 @@ iframe {
     width: 4px;
     left: 0;
     top: 10px;
+  }
+}
+
+@media print {
+  body {
+    background-color: white;
+  }
+
+  .side-menu, .head-menu {
+    display: none;
+  }
+
+  .container {
+    max-width: 95%;
+  }
+
+  .content .container div:first-of-type h1 {
+    margin-top: 0;
+  }
+
+  audio {
+    display: none;
   }
 
 }
