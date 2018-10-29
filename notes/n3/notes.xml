@@ -490,5 +490,19 @@
         <date>Oct 24, 2018</date>
       </lecture>
     </class>
+    <class id="3" name="第31课">
+      <lecture id="1">
+        <name>栄転の話 - 1</name>
+        <date>Oct 26, 2018</date>
+      </lecture>
+      <lecture id="2">
+        <name>栄転の話 - 2</name>
+        <date>Oct 27, 2018</date>
+      </lecture>
+      <lecture id="3">
+        <name>クモの糸</name>
+        <date>Oct 28, 2018</date>
+      </lecture>
+    </class>
   </chapter>
 </notes>
