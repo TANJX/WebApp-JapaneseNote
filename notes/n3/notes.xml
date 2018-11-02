@@ -504,5 +504,19 @@
         <date>Oct 28, 2018</date>
       </lecture>
     </class>
+    <class id="4" name="第32课">
+      <lecture id="1">
+        <name>思い出の場所</name>
+        <date>Oct 30, 2018</date>
+      </lecture>
+      <lecture id="2">
+        <name>トキ - 1</name>
+        <date>Oct 31, 2018</date>
+      </lecture>
+      <lecture id="3">
+        <name>トキ - 2</name>
+        <date>Nov 1, 2018</date>
+      </lecture>
+    </class>
   </chapter>
 </notes>
