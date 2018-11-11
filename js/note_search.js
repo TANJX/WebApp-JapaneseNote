@@ -40,6 +40,11 @@ $(document).scroll(function () {
     }
 });
 
+$('.more-result').click(function () {
+    console.log('yes');
+    $('#checkbox-1').prop('checked', false);
+});
+
 (function update() {
     let query = $('input[name="search"]').val();
     let checked = $('#checkbox-1').is(":checked");
@@ -47,11 +52,15 @@ $(document).scroll(function () {
         let xmlhttp = new XMLHttpRequest();
         xmlhttp.onreadystatechange = function () {
             if (this.readyState === 4 && this.status === 200) {
-                $('#result').html('');
-                $('#top-result').html('');
+                let $result_el = $('#result');
+                let $top_el = $('#top-result');
+                let $more_el = $('.more-result');
+                $result_el.html('');
+                $top_el.html('');
                 result = JSON.parse(this.responseText);
                 // console.log(result);
                 let count = 0;
+                checked ? $more_el.show() : $more_el.hide();
                 if (!checked) {
                     for (count; count < result['results'].length; count++) {
                         if (count > 100) break;
@@ -60,7 +69,7 @@ $(document).scroll(function () {
                         $entry.append("<div class='title'>" + result['results'][count]['title'] + "</div>");
                         let $more_btn = $(`<img src='/img/more.svg' alt='more icon' class='more' onclick='getDetail(${count})'>`);
                         $entry.append($more_btn);
-                        $('#result').append($entry);
+                        $result_el.append($entry);
                     }
                 }
                 for (count = 0; count < result['top'].length; count++) {
@@ -68,17 +77,19 @@ $(document).scroll(function () {
                     let $entry = $("<div class='entry'></div>");
                     $entry.append("<div class='content'>" + result['top'][count]['content'] + "</div>");
                     $entry.append("<div class='title'>" + result['top'][count]['title'] + "</div>");
-                    $('#top-result').append($entry);
+                    $top_el.append($entry);
                 }
+
+                $('.info').hide();
+                if ($result_el.children().length === 0 && $top_el.children().length === 0) {
+                    $('.no-result').show();
+                    $('.more-result').hide();
+                } else {
+                    $('.no-result').hide();
+                }
+                history.replaceState(null, null, 'http://notes.marstanjx.com/search/' + query + '/');
+                $('#banner-query').text(query);
             }
-            $('.info').hide();
-            if ($('#result').children().length === 0 && $('#top-result').children().length === 0) {
-                $('.no-result').show();
-            } else {
-                $('.no-result').hide();
-            }
-            history.replaceState(null, null, 'http://notes.marstanjx.com/search/' + query + '/');
-            $('#banner-query').text(query);
         };
         xmlhttp.open("GET", "/php/search.php?set=n3&query=" + query, true);
         xmlhttp.send();

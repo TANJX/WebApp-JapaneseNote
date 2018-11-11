@@ -72,6 +72,8 @@
 
   <div id="top-result" class="detail"></div>
 
+  <div class="more-result" hidden><img src="/img/more.svg" alt="more icon"></div>
+
   <div id="result"></div>
 
   <footer>
