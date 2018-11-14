@@ -1,3 +1,5 @@
+ErrorDocument 404 /404.html
+
 DirectorySlash off
 RedirectMatch ^/n3/$ /n3/chapter/1/
 RedirectMatch ^/n5/$ /n5/chapter/1/
@@ -5,7 +7,7 @@ RewriteEngine on
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteRule ^(.*[^/])$ /$1/ [L,R=301]
 RewriteRule ^search/$ search.php [NC,L]
-RewriteRule ^search/([^/d]+)/?$ search.php?query=$1 [NC,L]
+RewriteRule ^search/([^/]+)/?$ search.php?query=$1 [NC,L]
 RewriteRule ^reading/$ notes.php?notes=reading [NC,L]
-RewriteRule ^/?n3/chapter/([^/d]+)/?$ notes.php?notes=n3&chapter=$1 [L,QSA]
-RewriteRule ^/?n5/chapter/([^/d]+)/?$ notes.php?notes=n5&chapter=$1 [L,QSA]
+RewriteRule ^/?n3/chapter/([^/]+)/?$ notes.php?notes=n3&chapter=$1 [L,QSA]
+RewriteRule ^/?n5/chapter/([^/]+)/?$ notes.php?notes=n5&chapter=$1 [L,QSA]

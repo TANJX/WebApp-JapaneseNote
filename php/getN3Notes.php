@@ -31,7 +31,7 @@ foreach ($xml->children() as $chapter) {
 }
 include 'NoteExtension.php';
 
-function readChapter($filename)
+function readLecture($filename)
 {
   $fp = fopen($filename, "r");
   $str = fread($fp, filesize($filename));
@@ -44,6 +44,6 @@ function readChapter($filename)
 
 foreach ($courses as $course) {
   echo '<div class="lecture">';
-  readChapter($course);
+  readLecture($course);
   echo "</div>";
 }

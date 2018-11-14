@@ -11,7 +11,16 @@ $dir = new DirectoryIterator(dirname($path));
 $result = array();
 $top = array();
 
-foreach ($dir as $fileinfo) {
+if (file_exists('../notes/' . $_REQUEST['set'] . '/' . $query . '.md')) {
+  $note_path = '../notes/' . $_REQUEST['set'] . '/' . $query . '.md';
+  $fp = fopen($note_path, "r");
+  $str = fread($fp, filesize($note_path));
+  $text = NoteExtension::instance()->text($str);
+  $top[] = array(
+      'title' => '',
+      'content' => replacePath($text));
+
+} else foreach ($dir as $fileinfo) {
   if (!$fileinfo->isDot()) {
     $fp = fopen($fileinfo->getPath() . '/' . $fileinfo->getFilename(), "r");
     if (!$fp) continue;
@@ -53,7 +62,7 @@ foreach ($dir as $fileinfo) {
               'title' => $title,
               'id' => $note_info[0] * 100 + $note_info[1] * 10 + $note_info[2],
               'line' => $line_count,
-              'content' => str_replace("@path", "../notes/" . $_REQUEST['set'] . "/img", $text));
+              'content' => replacePath($text));
         } else {
           $str .= $line;
           $str .= PHP_EOL;
@@ -96,9 +105,9 @@ foreach ($dir as $fileinfo) {
           $hit = array(
               'title' => $title,
               'id' => $note_info[0] * 100 + $note_info[1] * 10 + $note_info[2],
-              'file' => $note_info[0]. "-". $note_info[1] . "-" . $note_info[2],
+              'file' => $note_info[0] . "-" . $note_info[1] . "-" . $note_info[2],
               'line' => $line_count,
-              'content' => $text,
+              'content' => replacePath($text),
               'h2' => $h2,
               'h3' => $h3,
           );
@@ -116,7 +125,7 @@ foreach ($dir as $fileinfo) {
           'title' => $title,
           'id' => $note_info[0] * 100 + $note_info[1] * 10 + $note_info[2],
           'line' => $line_count,
-          'content' => str_replace("@path", "../notes/" . $_REQUEST['set'] . "/img", $text));
+          'content' => replacePath($text));
     }
   }
 }
@@ -151,4 +160,11 @@ function endsWith($haystack, $needle)
   }
 
   return (substr($haystack, -$length) === $needle);
+}
+
+function replacePath($str)
+{
+  $str = str_replace("@path", "/notes/" . $_REQUEST['set'] . "/img", $str);
+  $str = str_replace("@audio", "/notes/" . $_REQUEST['set'] . "/audio", $str);
+  return $str;
 }

@@ -90,8 +90,10 @@ if ($start_line > 0 && $end_line < 0) {
 fclose($fp);
 require 'NoteExtension.php';
 $text = NoteExtension::instance()->text($str);
+$text = str_replace("@path", "/notes/" . $set . "/img", $text);
+$text = str_replace("@audio", "/notes/" . $set . "/audio", $text);
 echo json_encode(array(
-    'content' => str_replace("@path", "/notes/" . $set . "/img", $text),
+    'content' => $text,
     'start_line' => $start_line,
     'end_line' => $end_line
 ));

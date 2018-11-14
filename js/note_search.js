@@ -10,6 +10,8 @@ function getDetail(count) {
             let $entry_ = $(`#entry-${count}`);
             $entry_.children('.content').html(response['content']);
             $entry_.addClass('detail').addClass('detail__loaded');
+            $entry_.children('.more').remove();
+            // remove same entry
             for (let i = 0; i < result['results'].length; i++) {
                 if (i > 100) break;
                 if (i === count) continue;

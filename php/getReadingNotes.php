@@ -29,6 +29,6 @@ function readChapter($filename)
 
 foreach ($courses as $course) {
   echo '<div class="lecture">';
-  readChapter($course);
+  readLecture($course);
   echo "</div>";
 }
