@@ -16,7 +16,7 @@ PHP, Markdown, Javascript
 
 ## Progress | 进度
 ### N5-N4 Notes
-49 / 98 notes finished
+59 / 98 notes finished
 
 ### N3-N2 Notes
 110 / 110 notes finished
