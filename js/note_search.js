@@ -89,7 +89,7 @@ $('.more-result').click(function () {
                 } else {
                     $('.no-result').hide();
                 }
-                history.replaceState(null, null, 'http://notes.marstanjx.com/search/' + query + '/');
+                history.replaceState(null, null, '//notes.marstanjx.com/search/' + query + '/');
                 $('#banner-query').text(query);
             }
         };

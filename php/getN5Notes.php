@@ -29,7 +29,7 @@ foreach ($xml->children() as $chapter) {
 }
 require 'NoteExtension.php';
 
-function readChapter($filename)
+function readLecture($filename)
 {
   $fp = fopen($filename, "r");
   $str = fread($fp, filesize($filename));

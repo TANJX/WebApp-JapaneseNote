@@ -191,8 +191,25 @@ input {
   }
 }
 
-footer p {
-  margin-top: 50px;
-  font-size: .7rem;
-  color: #707070
+footer {
+  display: flex;
+  justify-content: space-between;
+  p {
+    margin-top: 50px;
+    font-size: .7rem;
+    color: #707070;
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+    &:hover a {
+      text-decoration: underline;
+    }
+  }
+  p:last-of-type {
+    opacity: 0;
+  }
+  &:hover p:last-of-type {
+    opacity: 1;
+  }
 }

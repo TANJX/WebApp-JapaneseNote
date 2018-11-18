@@ -77,7 +77,8 @@
   <div id="result"></div>
 
   <footer>
-    <p>Mars Inc.</p>
+    <p><a href="http://marstanjx.com" target="_blank">Mars Inc. 2018. </a></p>
+    <p><a href="https://github.com/TANJX/WebApp-JapaneseNote" target="_blank">GitHub. </a></p>
   </footer>
 </div>
 <script src="/js/note_search.js"></script>
