@@ -38,7 +38,7 @@ PHP, Markdown, Javascript
 - [Chapter 4 | 第四单元](http://notes.marstanjx.com/n5/chapter/4)
 - [Chapter 5 | 第五单元](http://notes.marstanjx.com/n5/chapter/5)
 - [Chapter 6 | 第六单元](http://notes.marstanjx.com/n5/chapter/6)
-- Chapter 7 | 第七单元
+- [Chapter 7 | 第七单元](http://notes.marstanjx.com/n5/chapter/7)
 - Chapter 8 | 第八单元
 - Chapter 9 | 第九单元
 - Chapter 10 | 第十单元
