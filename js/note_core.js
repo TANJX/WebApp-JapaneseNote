@@ -7,7 +7,7 @@ function switchUnit(unit) {
         $('#main-text').empty();
         loadNote(unit);
     });
-    history.replaceState(null, null, 'http://notes.marstanjx.com/' + NOTESET + '/chapter/' + unit);
+    history.replaceState(null, null, `//notes.marstanjx.com/${NOTESET}/chapter/${unit}/`);
     return false;
 }
 
